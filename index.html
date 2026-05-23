@@ -133,6 +133,22 @@
     }
     .btn-white:hover { background: var(--blue-pale); }
 
+    /* ========== SITE HEADER ========== */
+    .site-header {
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--blue-mist);
+      padding: 16px 0;
+    }
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .site-header__inner img {
+      height: 90px;
+      width: auto;
+    }
+
     /* ========== ANNOUNCEMENT ========== */
     .announcement {
       background: var(--navy);
@@ -164,18 +180,15 @@
       justify-content: space-between;
       height: 68px;
     }
-    .nav__logo-wrap {
-      display: block;
-      overflow: hidden;
-      height: 56px;
-      flex-shrink: 0;
+    .nav__logo img { height: 44px; width: auto; }
+    .nav__logo-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      text-decoration: none;
     }
-    .nav__logo-wrap img {
-      height: 84px;
-      width: auto;
-      display: block;
-      margin-top: -14px;
-    }
+    .nav__logo-text:hover { color: var(--blue); }
     .nav__links {
       display: flex;
       align-items: center;
@@ -327,6 +340,7 @@
       max-width: 420px;
       border-radius: 20px;
       object-fit: cover;
+      object-position: center top;
       box-shadow: 0 28px 64px rgba(0,0,0,0.30);
       margin: 0 auto;
       aspect-ratio: 3/4;
@@ -374,6 +388,7 @@
       width: 100%;
       height: 210px;
       object-fit: cover;
+      object-position: center bottom;
       display: block;
       background: var(--blue-pale);
     }
@@ -701,7 +716,7 @@
       margin-bottom: 48px;
     }
     .footer__brand img {
-      height: 90px;
+      height: 50px;
       margin-bottom: 16px;
       /* Shows logo in white on dark bg */
       filter: brightness(0) invert(1);
@@ -772,6 +787,13 @@
 </head>
 <body>
 
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/"><img src="./images/lca-logo.PNG" alt="LCA – Lice Consultants & Associates" /></a>
+    </div>
+  </header>
+
   <!-- ANNOUNCEMENT BAR -->
   <div class="announcement">
     Now serving San Diego · Orlando · York County &nbsp;|&nbsp;
@@ -781,9 +803,7 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="/" class="nav__logo-wrap">
-        <img src="./images/lca-logo.png" alt="LCA – Lice Consultants & Associates" />
-      </a>
+      <a href="/" class="nav__logo-text">LCA</a>
       <ul class="nav__links">
         <li><a href="#locations">Locations</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
@@ -842,7 +862,7 @@
         </div>
       </div>
       <div class="hero__photo">
-        <img src="./images/clinic-waiting-room.PNG" alt="LCA clinic waiting room" />
+        <img src="./images/technician-san-diego.JPG" alt="LCA certified lice technician" />
         <div class="hero__photo-card">
           <strong>1,000+</strong>
           <span>Families treated across 3 locations</span>
@@ -862,7 +882,7 @@
 
         <!-- San Diego -->
         <div class="location-card">
-          <img class="location-card__img" src="./images/clinic-san-diego.PNG" alt="LCA San Diego" />
+          <img class="location-card__img" src="./images/clinic-waiting-room.JPG" alt="LCA San Diego" />
           <div class="location-card__body">
             <div class="location-card__state">San Diego, CA</div>
             <div class="location-card__name">LCA San Diego</div>
@@ -887,7 +907,7 @@
 
         <!-- Orlando -->
         <div class="location-card">
-          <img class="location-card__img" src="./images/lca-orlando.png" alt="LCA Orlando" />
+          <img class="location-card__img" src="./images/clinic-orlando.JPG" alt="LCA Orlando" />
           <div class="location-card__body">
             <div class="location-card__state">Orlando, FL</div>
             <div class="location-card__name">LCA Orlando</div>
@@ -912,7 +932,7 @@
 
         <!-- York County -->
         <div class="location-card">
-          <img class="location-card__img" src="./images/lca-york.png" alt="LCA York County clinic" />
+          <div class="location-card__placeholder">🏥</div>
           <div class="location-card__body">
             <div class="location-card__state">York County, PA</div>
             <div class="location-card__name">LCA York County</div>
@@ -1013,13 +1033,13 @@
       </div>
       <div class="why__photos">
         <div class="why__photo">
-          <img src="./images/clinic-san-diego.PNG" alt="LCA San Diego clinic" />
+          <img src="./images/clinic-san-diego.JPG" alt="LCA San Diego clinic" style="object-position: center bottom;" />
         </div>
         <div class="why__photo">
-          <img src="./images/nacy-chair.jpeg" alt="LCA certified technician" />
+          <img src="./images/clinic-orlando.JPG" alt="LCA Orlando treatment room" />
         </div>
         <div class="why__photo">
-          <img src="./images/white-chair.png" alt="LCA treatment room" />
+          <img src="./images/technician-san-diego.JPG" alt="LCA certified technician" style="object-position: center top;" />
         </div>
       </div>
     </div>
@@ -1092,7 +1112,7 @@
             <div>
               <strong>Email</strong>
               <!-- TODO: Add email -->
-              <span>info@liceconsultants.com</span>
+              <span>info@liceconsultant.com</span>
             </div>
           </div>
           <div class="contact__detail">
@@ -1207,7 +1227,7 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <img src="./images/lca-logo.png" alt="LCA – Lice Consultants & Associates" />
+          <img src="./images/lca-logo.PNG" alt="LCA – Lice Consultants & Associates" />
           <p>Professional, guaranteed lice removal for the whole family. Three locations across the U.S. — the same trusted process at every clinic.</p>
         </div>
         <div class="footer__col">
@@ -1232,7 +1252,7 @@
           <ul>
             <!-- TODO: Add real contact info -->
             <li><a href="tel:5550000000">(555) 000-0000</a></li>
-            <li><a href="mailto:info@liceconsultants.com">info@liceconsultants.com</a></li>
+            <li><a href="mailto:info@liceconsultant.com">info@liceconsultant.com</a></li>
             <li><a href="#">Facebook</a></li>
           </ul>
         </div>
