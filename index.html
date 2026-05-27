@@ -3,46 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LCA – Lice Consultants &amp; Associates | Professional Lice Removal</title>
-  <meta name="description" content="LCA – Lice Consultants &amp; Associates offers professional, guaranteed lice removal treatments in San Diego, Orlando, and York County. Fast, discreet, and effective." />
+  <title>LCA – Lice Consultants & Associates | Professional Lice Removal</title>
+  <meta name="description" content="LCA – Lice Consultants & Associates offers professional, guaranteed lice removal treatments in San Diego, Orlando, and York County. Fast, discreet, and effective." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
+
+    /* ========== RESET & BASE ========== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; color: #1C2B5E; background: #FDFCFB; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #1C2B5E;
+      background: #FDFCFB;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
+
     :root {
-      --navy: #1B2A6B; --navy-soft: #2C3E80; --blue: #2D8CC4; --blue-hover: #2478AB;
-      --blue-pale: #EBF4FB; --blue-mist: #D4E8F5; --white: #ffffff; --warm-white: #FDFCFB;
-      --gray-500: #7A8BA6; --gray-700: #3D4F6B; --radius: 14px; --radius-sm: 8px;
-      --shadow: 0 4px 28px rgba(27,42,107,0.09); --shadow-card: 0 2px 16px rgba(27,42,107,0.08);
+      --navy:        #1B2A6B;
+      --navy-soft:   #2C3E80;
+      --blue:        #2D8CC4;
+      --blue-hover:  #2478AB;
+      --blue-pale:   #EBF4FB;
+      --blue-mist:   #D4E8F5;
+      --sand:        #F5EDD8;
+      --sand-dark:   #E8D9B8;
+      --white:       #ffffff;
+      --warm-white:  #FDFCFB;
+      --gray-100:    #F4F4F2;
+      --gray-200:    #E8E8E4;
+      --gray-500:    #7A8BA6;
+      --gray-700:    #3D4F6B;
+      --radius:      14px;
+      --radius-sm:   8px;
+      --shadow:      0 4px 28px rgba(27,42,107,0.09);
+      --shadow-sm:   0 2px 10px rgba(27,42,107,0.06);
+      --shadow-card: 0 2px 16px rgba(27,42,107,0.08);
     }
+
     .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
     .section { padding: 80px 0; }
-    .section--blue { background: var(--blue-pale); }
-    .section--warm { background: var(--warm-white); }
-    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
-    .section-title { font-size: clamp(1.65rem, 4vw, 2.25rem); font-weight: 800; color: var(--navy); line-height: 1.18; margin-bottom: 14px; letter-spacing: -0.01em; }
-    .section-sub { font-size: 1.02rem; color: var(--gray-500); max-width: 540px; line-height: 1.72; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 100px; font-size: 0.93rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease; border: none; white-space: nowrap; }
+    .section--blue  { background: var(--blue-pale); }
+    .section--warm  { background: var(--warm-white); }
+    .section-label  {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .section-title  {
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.18;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .section-sub {
+      font-size: 1.02rem;
+      color: var(--gray-500);
+      max-width: 540px;
+      line-height: 1.72;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: 100px;
+      font-size: 0.93rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
     .btn-primary { background: var(--navy); color: var(--white); box-shadow: 0 4px 16px rgba(27,42,107,0.22); }
-    .btn-primary:hover { background: var(--navy-soft); transform: translateY(-2px); }
+    .btn-primary:hover { background: var(--navy-soft); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,42,107,0.28); }
+    .btn-blue { background: var(--blue); color: var(--white); box-shadow: 0 4px 16px rgba(45,140,196,0.25); }
+    .btn-blue:hover { background: var(--blue-hover); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,140,196,0.32); }
     .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--blue-mist); }
     .btn-outline:hover { background: var(--blue-pale); border-color: var(--blue); }
     .btn-white { background: var(--white); color: var(--navy); box-shadow: 0 2px 10px rgba(0,0,0,0.10); }
     .btn-white:hover { background: var(--blue-pale); }
-    .site-header { background: var(--warm-white); border-bottom: 1px solid var(--blue-mist); padding: 16px 0; }
-    .site-header__inner { display: flex; align-items: center; justify-content: center; }
-    .site-header__inner img { height: 90px; width: auto; }
-    .announcement { background: var(--navy); color: rgba(255,255,255,0.88); text-align: center; font-size: 0.81rem; font-weight: 500; padding: 9px 20px; }
+
+    .announcement {
+      background: var(--navy);
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+      font-size: 0.81rem;
+      font-weight: 500;
+      padding: 9px 20px;
+      letter-spacing: 0.01em;
+    }
     .announcement a { color: #8CC8E8; font-weight: 700; }
-    .nav { background: rgba(253,252,251,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--blue-mist); position: sticky; top: 0; z-index: 100; }
+
+    .nav {
+      background: rgba(253,252,251,0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--blue-mist);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
     .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-    .nav__logo-text { font-size: 1.35rem; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; text-decoration: none; }
-    .nav__logo-text:hover { color: var(--blue); }
+    .nav__logo-wrap { display: block; overflow: hidden; height: 56px; flex-shrink: 0; }
+    .nav__logo-wrap img { height: 84px; width: auto; display: block; margin-top: -14px; }
     .nav__links { display: flex; align-items: center; gap: 30px; list-style: none; }
     .nav__links a { font-size: 0.88rem; font-weight: 600; color: var(--gray-700); transition: color 0.15s; }
     .nav__links a:hover { color: var(--blue); }
@@ -56,7 +131,14 @@
     .nav__mobile ul { list-style: none; margin-bottom: 16px; }
     .nav__mobile li { border-bottom: 1px solid var(--blue-mist); }
     .nav__mobile a { display: block; padding: 13px 0; font-weight: 600; color: var(--navy); }
-    .hero { background: linear-gradient(150deg, #1B2A6B 0%, #2050A0 55%, #2D8CC4 100%); color: var(--white); padding: 88px 0 80px; position: relative; overflow: hidden; }
+
+    .hero {
+      background: linear-gradient(150deg, #1B2A6B 0%, #2050A0 55%, #2D8CC4 100%);
+      color: var(--white);
+      padding: 88px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
     .hero::before { content: ''; position: absolute; top: -20%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%); pointer-events: none; }
     .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(45,140,196,0.15) 0%, transparent 65%); pointer-events: none; }
     .hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
@@ -70,14 +152,16 @@
     .hero__trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.83rem; color: rgba(255,255,255,0.72); font-weight: 500; }
     .hero__trust-dot { width: 6px; height: 6px; border-radius: 50%; background: #8CC8E8; flex-shrink: 0; }
     .hero__photo { position: relative; }
-    .hero__photo img { width: 100%; max-width: 420px; border-radius: 20px; object-fit: cover; object-position: center top; box-shadow: 0 28px 64px rgba(0,0,0,0.30); margin: 0 auto; aspect-ratio: 3/4; }
+    .hero__photo img { width: 100%; max-width: 420px; border-radius: 20px; object-fit: cover; box-shadow: 0 28px 64px rgba(0,0,0,0.30); margin: 0 auto; aspect-ratio: 3/4; }
     .hero__photo-card { position: absolute; bottom: -20px; left: -10px; background: var(--white); border-radius: var(--radius-sm); padding: 14px 20px; box-shadow: var(--shadow); color: var(--navy); }
     .hero__photo-card strong { display: block; font-size: 1.3rem; font-weight: 800; color: var(--blue); line-height: 1; margin-bottom: 3px; }
     .hero__photo-card span { font-size: 0.78rem; color: var(--gray-500); }
+
     .locations__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
     .location-card { background: var(--white); border: 1px solid var(--blue-mist); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-card); transition: transform 0.22s ease, box-shadow 0.22s ease; }
     .location-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-    .location-card__img { width: 100%; height: 210px; object-fit: cover; object-position: center bottom; display: block; background: var(--blue-pale); }
+    .location-card__img { width: 100%; height: 210px; object-fit: cover; display: block; background: var(--blue-pale); }
+    .location-card__placeholder { width: 100%; height: 210px; background: linear-gradient(135deg, var(--blue-pale), var(--blue-mist)); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
     .location-card__body { padding: 22px 22px 16px; }
     .location-card__state { font-size: 0.69rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--blue); margin-bottom: 5px; }
     .location-card__name { font-size: 1.18rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
@@ -86,6 +170,7 @@
     .location-card__footer { padding: 14px 22px 20px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--blue-mist); margin-top: 8px; }
     .location-card__price { font-weight: 700; color: var(--navy); font-size: 0.9rem; }
     .location-card__price span { color: var(--gray-500); font-weight: 400; font-size: 0.76rem; display: block; margin-top: 1px; }
+
     .steps { counter-reset: steps; }
     .steps__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 52px; position: relative; }
     .steps__line { position: absolute; top: 27px; left: calc(12.5% + 20px); right: calc(12.5% + 20px); height: 1px; background: linear-gradient(90deg, transparent, var(--blue-mist), var(--blue), var(--blue-mist), transparent); }
@@ -93,16 +178,20 @@
     .step__num { width: 54px; height: 54px; background: var(--navy); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 800; margin: 0 auto 20px; position: relative; z-index: 1; box-shadow: 0 0 0 5px var(--blue-pale), 0 0 0 6px var(--blue-mist); }
     .step__title { font-size: 0.96rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
     .step__desc { font-size: 0.85rem; color: var(--gray-500); line-height: 1.65; }
+
     .why__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
     .why__list { margin-top: 28px; display: flex; flex-direction: column; gap: 22px; }
     .why__item { display: flex; gap: 16px; align-items: flex-start; }
     .why__icon { width: 46px; height: 46px; border-radius: 12px; background: var(--blue-pale); border: 1px solid var(--blue-mist); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
     .why__item h4 { font-weight: 700; color: var(--navy); margin-bottom: 4px; font-size: 0.97rem; }
-    .why__item p { font-size: 0.86rem; color: var(--gray-500); line-height: 1.68; }
+    .why__item p  { font-size: 0.86rem; color: var(--gray-500); line-height: 1.68; }
     .why__photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .why__photo { border-radius: var(--radius); overflow: hidden; background: var(--blue-pale); }
     .why__photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
     .why__photo:hover img { transform: scale(1.03); }
+    .why__photo:first-child { grid-column: 1 / -1; height: 270px; }
+    .why__photo:not(:first-child) { height: 180px; }
+
     .testimonials__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
     .testimonial { background: var(--white); border: 1px solid var(--blue-mist); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-card); transition: transform 0.2s; }
     .testimonial:hover { transform: translateY(-3px); }
@@ -110,27 +199,29 @@
     .testimonial__text { font-size: 0.91rem; color: var(--gray-700); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
     .testimonial__author { display: flex; align-items: center; gap: 11px; }
     .testimonial__avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; }
-    .testimonial__name { font-weight: 700; font-size: 0.86rem; color: var(--navy); }
+    .testimonial__name  { font-weight: 700; font-size: 0.86rem; color: var(--navy); }
     .testimonial__place { font-size: 0.76rem; color: var(--gray-500); }
+
     .contact__grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
     .contact__info { padding-top: 8px; }
     .contact__info h2 { margin-bottom: 14px; }
-    .contact__info p { color: var(--gray-500); font-size: 0.95rem; line-height: 1.72; margin-bottom: 28px; }
+    .contact__info p  { color: var(--gray-500); font-size: 0.95rem; line-height: 1.72; margin-bottom: 28px; }
     .contact__details { display: flex; flex-direction: column; gap: 14px; }
     .contact__detail { display: flex; align-items: flex-start; gap: 14px; font-size: 0.9rem; }
     .contact__detail-icon { width: 40px; height: 40px; background: var(--blue-pale); border: 1px solid var(--blue-mist); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
     .contact__detail strong { display: block; color: var(--navy); font-weight: 700; margin-bottom: 2px; }
-    .contact__detail span { color: var(--gray-500); }
+    .contact__detail span  { color: var(--gray-500); }
     .contact__form { background: var(--white); border: 1px solid var(--blue-mist); border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow-card); }
     .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form__group { margin-bottom: 18px; }
-    .form__group label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
-    .form__group input, .form__group select, .form__group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid var(--blue-mist); border-radius: var(--radius-sm); font-size: 0.9rem; font-family: inherit; color: var(--navy); background: var(--warm-white); transition: border-color 0.18s; outline: none; -webkit-appearance: none; }
+    .form__group label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; letter-spacing: 0.01em; }
+    .form__group input, .form__group select, .form__group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid var(--blue-mist); border-radius: var(--radius-sm); font-size: 0.9rem; font-family: inherit; color: var(--navy); background: var(--warm-white); transition: border-color 0.18s, box-shadow 0.18s; outline: none; -webkit-appearance: none; }
     .form__group input:focus, .form__group select:focus, .form__group textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(45,140,196,0.12); }
     .form__group textarea { resize: vertical; min-height: 110px; }
     .form__group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A8BA6' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
     .form__submit { width: 100%; padding: 15px; font-size: 0.97rem; border-radius: 100px; margin-top: 4px; }
     .form__note { text-align: center; font-size: 0.78rem; color: var(--gray-500); margin-top: 12px; }
+
     .faq__inner { max-width: 740px; margin: 40px auto 0; }
     details { border-bottom: 1px solid var(--blue-mist); }
     summary { cursor: pointer; padding: 20px 0; font-weight: 700; font-size: 0.95rem; color: var(--navy); display: flex; justify-content: space-between; align-items: center; list-style: none; gap: 16px; user-select: none; }
@@ -138,43 +229,58 @@
     summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; color: var(--blue); flex-shrink: 0; line-height: 1; }
     details[open] summary::after { content: '−'; }
     details p { padding-bottom: 20px; font-size: 0.91rem; color: var(--gray-500); line-height: 1.78; }
+
     .footer { background: var(--navy); color: rgba(255,255,255,0.68); padding: 60px 0 32px; }
     .footer__top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; margin-bottom: 48px; }
-    .footer__brand img { height: 50px; margin-bottom: 16px; filter: brightness(0) invert(1); }
+    .footer__brand img { height: 90px; margin-bottom: 16px; filter: brightness(0) invert(1); }
     .footer__brand p { font-size: 0.85rem; line-height: 1.72; max-width: 270px; }
     .footer__col h5 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--white); margin-bottom: 16px; }
     .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
     .footer__col a { font-size: 0.85rem; color: rgba(255,255,255,0.58); transition: color 0.15s; }
     .footer__col a:hover { color: var(--white); }
     .footer__bottom { border-top: 1px solid rgba(255,255,255,0.10); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: rgba(255,255,255,0.38); flex-wrap: wrap; gap: 8px; }
+
     @media (max-width: 960px) {
-      .hero__inner { grid-template-columns: 1fr; } .hero__photo { display: none; }
-      .locations__grid { grid-template-columns: 1fr 1fr; } .steps__grid { grid-template-columns: 1fr 1fr; }
-      .steps__line { display: none; } .why__grid { grid-template-columns: 1fr; } .why__photos { order: -1; }
-      .testimonials__grid { grid-template-columns: 1fr 1fr; } .contact__grid { grid-template-columns: 1fr; }
-      .footer__top { grid-template-columns: 1fr 1fr; }
+      .hero__inner        { grid-template-columns: 1fr; }
+      .hero__photo        { display: none; }
+      .locations__grid    { grid-template-columns: 1fr 1fr; }
+      .steps__grid        { grid-template-columns: 1fr 1fr; }
+      .steps__line        { display: none; }
+      .why__grid          { grid-template-columns: 1fr; }
+      .why__photos        { order: -1; }
+      .testimonials__grid { grid-template-columns: 1fr 1fr; }
+      .contact__grid      { grid-template-columns: 1fr; }
+      .footer__top        { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
-      .section { padding: 56px 0; } .nav__links, .nav__actions .btn, .nav__phone { display: none; }
-      .nav__toggle { display: flex; } .hero { padding: 56px 0 52px; }
-      .hero__ctas { flex-direction: column; } .hero__ctas .btn { width: 100%; justify-content: center; }
-      .locations__grid { grid-template-columns: 1fr; } .steps__grid { grid-template-columns: 1fr; }
-      .testimonials__grid { grid-template-columns: 1fr; } .form__row { grid-template-columns: 1fr; }
-      .contact__form { padding: 24px; } .footer__top { grid-template-columns: 1fr; gap: 28px; }
-      .footer__bottom { flex-direction: column; text-align: center; }
+      .section            { padding: 56px 0; }
+      .nav__links, .nav__actions .btn, .nav__phone { display: none; }
+      .nav__toggle        { display: flex; }
+      .hero               { padding: 56px 0 52px; }
+      .hero__ctas         { flex-direction: column; }
+      .hero__ctas .btn    { width: 100%; justify-content: center; }
+      .locations__grid    { grid-template-columns: 1fr; }
+      .steps__grid        { grid-template-columns: 1fr; }
+      .testimonials__grid { grid-template-columns: 1fr; }
+      .form__row          { grid-template-columns: 1fr; }
+      .contact__form      { padding: 24px; }
+      .footer__top        { grid-template-columns: 1fr; gap: 28px; }
+      .footer__bottom     { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="/"><img src="./images/lca-logo.PNG" alt="LCA – Lice Consultants &amp; Associates" /></a>
-    </div>
-  </header>
-  <div class="announcement">Now serving San Diego · Orlando · York County &nbsp;|&nbsp; <a href="#locations">Find your nearest clinic →</a></div>
+
+  <div class="announcement">
+    Now serving San Diego · Orlando · York County &nbsp;|&nbsp;
+    <a href="#locations">Find your nearest clinic →</a>
+  </div>
+
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="/" class="nav__logo-text">LCA</a>
+      <a href="/" class="nav__logo-wrap">
+        <img src="./images/lca-logo.png" alt="LCA – Lice Consultants & Associates" />
+      </a>
       <ul class="nav__links">
         <li><a href="#locations">Locations</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
@@ -182,10 +288,15 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <div class="nav__actions">
-        <div class="nav__phone">(555) 000-0000<span>Call or text anytime</span></div>
+        <div class="nav__phone">
+          (555) 000-0000
+          <span>Call or text anytime</span>
+        </div>
         <a href="#contact" class="btn btn-primary">Get in Touch</a>
       </div>
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
     <div class="nav__mobile" id="navMobile">
       <ul>
@@ -198,15 +309,26 @@
       <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get in Touch</a>
     </div>
   </nav>
+
   <section class="hero">
     <div class="container hero__inner">
       <div>
-        <div class="hero__badge"><span class="check">✓</span> Satisfaction Guaranteed — Lice-Free or We Return</div>
+        <div class="hero__badge">
+          <span class="check">✓</span> Satisfaction Guaranteed — Lice-Free or We Return
+        </div>
         <h1>Professional Lice Removal<br /><em>You Can Trust</em></h1>
-        <p class="hero__sub">Fast, discreet, and completely chemical-free lice treatment. Our certified technicians have helped thousands of families get back to normal — often in a single visit.</p>
+        <p class="hero__sub">
+          Fast, discreet, and completely chemical-free lice treatment.
+          Our certified technicians have helped thousands of families
+          get back to normal — often in a single visit.
+        </p>
         <div class="hero__ctas">
-          <a href="#contact" class="btn btn-white" style="font-size:1rem;padding:15px 30px;">U0001f4cb Request an Appointment</a>
-          <a href="#locations" class="btn" style="background:rgba(255,255,255,0.10);border:2px solid rgba(255,255,255,0.28);color:#fff;font-size:1rem;padding:15px 30px;">U0001f4cd Find a Location</a>
+          <a href="#contact" class="btn btn-white" style="font-size:1rem; padding:15px 30px;">
+            U0001f4cb Request an Appointment
+          </a>
+          <a href="#locations" class="btn" style="background:rgba(255,255,255,0.10); border:2px solid rgba(255,255,255,0.28); color:#fff; font-size:1rem; padding:15px 30px;">
+            U0001f4cd Find a Location
+          </a>
         </div>
         <div class="hero__trust">
           <div class="hero__trust-item"><div class="hero__trust-dot"></div> Same-day availability</div>
@@ -216,10 +338,14 @@
       </div>
       <div class="hero__photo">
         <img src="./images/clinic-waiting-room.PNG" alt="LCA clinic waiting room" />
-        <div class="hero__photo-card"><strong>1,000+</strong><span>Families treated across 3 locations</span></div>
+        <div class="hero__photo-card">
+          <strong>1,000+</strong>
+          <span>Families treated across 3 locations</span>
+        </div>
       </div>
     </div>
   </section>
+
   <section class="section section--warm" id="locations">
     <div class="container">
       <div class="section-label">Our Clinics</div>
@@ -227,12 +353,18 @@
       <p class="section-sub">Three dedicated lice removal clinics — same certified process, same guarantee, everywhere.</p>
       <div class="locations__grid">
         <div class="location-card">
-          <img class="location-card__img" src="./images/clinic-waiting-room.PNG" alt="LCA San Diego" />
+          <img class="location-card__img" src="./images/clinic-san-diego.PNG" alt="LCA San Diego" />
           <div class="location-card__body">
             <div class="location-card__state">San Diego, CA</div>
             <div class="location-card__name">LCA San Diego</div>
-            <div class="location-card__detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>123 Example Street, San Diego, CA 92101</div>
-            <div class="location-card__detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon – Sat: 9am – 6pm</div>
+            <div class="location-card__detail">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              123 Example Street, San Diego, CA 92101
+            </div>
+            <div class="location-card__detail">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Mon – Sat: 9am – 6pm
+            </div>
           </div>
           <div class="location-card__footer">
             <div class="location-card__price">Starting at $[X]<span>per person</span></div>
@@ -240,12 +372,18 @@
           </div>
         </div>
         <div class="location-card">
-          <img class="location-card__img" src="./images/lca-orlando.PNG" alt="LCA Orlando" />
+          <img class="location-card__img" src="./images/lca-orlando.png" alt="LCA Orlando" />
           <div class="location-card__body">
             <div class="location-card__state">Orlando, FL</div>
             <div class="location-card__name">LCA Orlando</div>
-            <div class="location-card__detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>456 Example Blvd, Orlando, FL 32801</div>
-            <div class="location-card__detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon – Sat: 9am – 6pm</div>
+            <div class="location-card__detail">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              456 Example Blvd, Orlando, FL 32801
+            </div>
+            <div class="location-card__detail">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Mon – Sat: 9am – 6pm
+            </div>
           </div>
           <div class="location-card__footer">
             <div class="location-card__price">Starting at $[X]<span>per person</span></div>
@@ -253,12 +391,18 @@
           </div>
         </div>
         <div class="location-card">
-          <img class="location-card__img" src="./images/lca-york.PNG" alt="LCA York County" />
+          <img class="location-card__img" src="./images/lca-york.png" alt="LCA York County clinic" />
           <div class="location-card__body">
             <div class="location-card__state">York County, PA</div>
             <div class="location-card__name">LCA York County</div>
-            <div class="location-card__detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>789 Example Ave, York, PA 17401</div>
-            <div class="location-card__detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon – Sat: 9am – 6pm</div>
+            <div class="location-card__detail">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              789 Example Ave, York, PA 17401
+            </div>
+            <div class="location-card__detail">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Mon – Sat: 9am – 6pm
+            </div>
           </div>
           <div class="location-card__footer">
             <div class="location-card__price">Starting at $[X]<span>per person</span></div>
@@ -268,6 +412,7 @@
       </div>
     </div>
   </section>
+
   <section class="section section--blue" id="how-it-works">
     <div class="container">
       <div style="text-align:center">
@@ -284,6 +429,7 @@
       </div>
     </div>
   </section>
+
   <section class="section section--warm" id="why-lca">
     <div class="container why__grid">
       <div>
@@ -298,25 +444,39 @@
         </div>
       </div>
       <div class="why__photos">
-        <div class="why__photo" style="grid-column:auto;height:240px;">
-          <img src="./images/nacy-chair.JPG" alt="LCA navy treatment chair" style="object-position:center bottom;" />
-        </div>
-        <div class="why__photo" style="height:240px;">
-          <img src="./images/white-chair.PNG" alt="LCA white treatment chair" style="object-position:center bottom;" />
-        </div>
+        <div class="why__photo"><img src="./images/clinic-san-diego.PNG" alt="LCA San Diego clinic" /></div>
+        <div class="why__photo"><img src="./images/nacy-chair.jpeg" alt="LCA certified technician" /></div>
+        <div class="why__photo"><img src="./images/white-chair.png" alt="LCA treatment room" /></div>
       </div>
     </div>
   </section>
+
   <section class="section section--blue">
     <div class="container">
-      <div style="text-align:center"><div class="section-label">Reviews</div><h2 class="section-title">What Families Are Saying</h2></div>
+      <div style="text-align:center">
+        <div class="section-label">Reviews</div>
+        <h2 class="section-title">What Families Are Saying</h2>
+      </div>
       <div class="testimonials__grid">
-        <div class="testimonial"><div class="testimonial__stars">★★★★★</div><p class="testimonial__text">"I was mortified when the school called. LCA had us in same-day — so kind and professional. My daughter was lice-free in one visit. Absolute lifesavers."</p><div class="testimonial__author"><div class="testimonial__avatar">SM</div><div><div class="testimonial__name">Sarah M.</div><div class="testimonial__place">San Diego, CA</div></div></div></div>
-        <div class="testimonial"><div class="testimonial__stars">★★★★★</div><p class="testimonial__text">"Three kids, all treated in one afternoon. Staff was patient and thorough. Worth every penny to know it was done right. We recommend LCA to everyone."</p><div class="testimonial__author"><div class="testimonial__avatar">JR</div><div><div class="testimonial__name">Jennifer R.</div><div class="testimonial__place">Orlando, FL</div></div></div></div>
-        <div class="testimonial"><div class="testimonial__stars">★★★★★</div><p class="testimonial__text">"Finally a place that actually knows what they're doing. No harsh chemicals, no guessing. The technician explained everything and was so reassuring."</p><div class="testimonial__author"><div class="testimonial__avatar">TK</div><div><div class="testimonial__name">Tasha K.</div><div class="testimonial__place">York County, PA</div></div></div></div>
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"I was mortified when the school called. LCA had us in same-day — so kind and professional. My daughter was lice-free in one visit. Absolute lifesavers."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">SM</div><div><div class="testimonial__name">Sarah M.</div><div class="testimonial__place">San Diego, CA</div></div></div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"Three kids, all treated in one afternoon. Staff was patient and thorough. Worth every penny to know it was done right. We recommend LCA to everyone."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">JR</div><div><div class="testimonial__name">Jennifer R.</div><div class="testimonial__place">Orlando, FL</div></div></div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"Finally a place that actually knows what they're doing. No harsh chemicals, no guessing. The technician explained everything and was so reassuring."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">TK</div><div><div class="testimonial__name">Tasha K.</div><div class="testimonial__place">York County, PA</div></div></div>
+        </div>
       </div>
     </div>
   </section>
+
   <section class="section section--warm" id="contact">
     <div class="container contact__grid">
       <div class="contact__info">
@@ -325,7 +485,7 @@
         <p>Fill out the form and we'll reach out to confirm your appointment time. Same-day availability is often possible — don't hesitate to reach out.</p>
         <div class="contact__details">
           <div class="contact__detail"><div class="contact__detail-icon">U0001f4de</div><div><strong>Call or Text</strong><span>(555) 000-0000 · Available Mon–Sat</span></div></div>
-          <div class="contact__detail"><div class="contact__detail-icon">✉️</div><div><strong>Email</strong><span>info@liceconsultant.com</span></div></div>
+          <div class="contact__detail"><div class="contact__detail-icon">✉️</div><div><strong>Email</strong><span>info@liceconsultants.com</span></div></div>
           <div class="contact__detail"><div class="contact__detail-icon">U0001f4cd</div><div><strong>Locations</strong><span>San Diego · Orlando · York County</span></div></div>
           <div class="contact__detail"><div class="contact__detail-icon">U0001f550</div><div><strong>Hours</strong><span>Monday – Saturday, 9am – 6pm</span></div></div>
         </div>
@@ -340,50 +500,76 @@
             <div class="form__group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@email.com" required /></div>
             <div class="form__group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" /></div>
           </div>
-          <div class="form__group"><label for="location">Which Location?</label><select id="location" name="location" required><option value="" disabled selected>Select a clinic…</option><option value="san-diego">San Diego, CA</option><option value="orlando">Orlando, FL</option><option value="york-county">York County, PA</option></select></div>
-          <div class="form__group"><label for="people">How many people need to be seen?</label><select id="people" name="people_count"><option value="1">1 person</option><option value="2">2 people</option><option value="3">3 people</option><option value="4+">4 or more</option></select></div>
-          <div class="form__group"><label for="message">Anything else we should know? (optional)</label><textarea id="message" name="message" placeholder="e.g. preferred days/times, hair type, questions…"></textarea></div>
+          <div class="form__group">
+            <label for="location">Which Location?</label>
+            <select id="location" name="location" required>
+              <option value="" disabled selected>Select a clinic…</option>
+              <option value="san-diego">San Diego, CA</option>
+              <option value="orlando">Orlando, FL</option>
+              <option value="york-county">York County, PA</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="people">How many people need to be seen?</label>
+            <select id="people" name="people_count">
+              <option value="1">1 person</option>
+              <option value="2">2 people</option>
+              <option value="3">3 people</option>
+              <option value="4+">4 or more</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="message">Anything else we should know? (optional)</label>
+            <textarea id="message" name="message" placeholder="e.g. preferred days/times, hair type, questions…"></textarea>
+          </div>
           <button type="submit" class="btn btn-primary form__submit">Send My Request →</button>
           <p class="form__note">We typically respond within a few hours during business hours.</p>
         </form>
       </div>
     </div>
   </section>
+
   <section class="section section--blue" id="faq">
     <div class="container">
-      <div style="text-align:center"><div class="section-label">FAQ</div><h2 class="section-title">Common Questions</h2></div>
+      <div style="text-align:center">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Common Questions</h2>
+      </div>
       <div class="faq__inner">
         <details open><summary>How long does treatment take?</summary><p>Most sessions take 60–90 minutes per person depending on hair length, thickness, and the level of infestation. We'll give you a more specific estimate when you reach out to schedule.</p></details>
-        <details><summary>Do I need to do anything to prepare?</summary><p>Come with dry, detangled hair and no product or conditioner in it. That's it — our technicians handle everything else.</p></details>
-        <details><summary>Is the treatment safe for children?</summary><p>Yes — our method is completely chemical-free and safe for all ages, including newborns, pregnant women, and people with sensitive scalps.</p></details>
-        <details><summary>What if lice come back after treatment?</summary><p>We stand behind our work. If lice return within the guarantee window after your treatment, we'll retreat at no additional charge.</p></details>
-        <details><summary>Can you treat hair extensions, braids, or locs?</summary><p>Yes. We offer a specialized alternative for clients with extensions, braids, locs, and other specialty hair situations. Our technicians will assess your specific situation.</p></details>
+        <details><summary>Do I need to do anything to prepare?</summary><p>Come with dry, detangled hair and no product or conditioner in it. That's it — our technicians handle everything else. You don't need to bag stuffed animals or strip your whole house before coming in.</p></details>
+        <details><summary>Is the treatment safe for children?</summary><p>Yes — our method is completely chemical-free and safe for all ages, including newborns, pregnant women, and people with sensitive scalps. We do not use pesticide-based shampoos of any kind.</p></details>
+        <details><summary>What if lice come back after treatment?</summary><p>We stand behind our work. If lice return within the guarantee window after your treatment, we'll retreat at no additional charge. Just call us and we'll get you back in promptly.</p></details>
+        <details><summary>Can you treat hair extensions, braids, or locs?</summary><p>Yes. We offer a specialized alternative for clients with extensions, braids, locs, and other specialty hair situations where our standard process needs to be adapted. Our technicians will assess your specific situation and guide you through the best approach.</p></details>
         <details><summary>Should the whole family come in?</summary><p>We recommend all immediate household members be checked — head checks are free. This helps prevent re-infestation and gives everyone peace of mind.</p></details>
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <img src="./images/lca-logo.PNG" alt="LCA – Lice Consultants &amp; Associates" />
+          <img src="./images/lca-logo.png" alt="LCA – Lice Consultants & Associates" />
           <p>Professional, guaranteed lice removal for the whole family. Three locations across the U.S. — the same trusted process at every clinic.</p>
         </div>
         <div class="footer__col"><h5>Locations</h5><ul><li><a href="/san-diego">San Diego, CA</a></li><li><a href="/orlando">Orlando, FL</a></li><li><a href="/york-county">York County, PA</a></li></ul></div>
         <div class="footer__col"><h5>Navigate</h5><ul><li><a href="#how-it-works">How It Works</a></li><li><a href="#why-lca">Why LCA</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
-        <div class="footer__col"><h5>Contact</h5><ul><li><a href="tel:5550000000">(555) 000-0000</a></li><li><a href="mailto:info@liceconsultant.com">info@liceconsultant.com</a></li><li><a href="#">Facebook</a></li></ul></div>
+        <div class="footer__col"><h5>Contact</h5><ul><li><a href="tel:5550000000">(555) 000-0000</a></li><li><a href="mailto:info@liceconsultants.com">info@liceconsultants.com</a></li><li><a href="#">Facebook</a></li></ul></div>
       </div>
       <div class="footer__bottom">
-        <span>© 2026 LCA — Lice Consultants &amp; Associates. All rights reserved.</span>
+        <span>© 2026 LCA — Lice Consultants & Associates. All rights reserved.</span>
         <span>Website by Shariti &nbsp;·&nbsp; <a href="#" style="color:rgba(255,255,255,0.38)">Privacy Policy</a></span>
       </div>
     </div>
   </footer>
+
   <script>
     const toggle = document.getElementById('navToggle');
     const mobileNav = document.getElementById('navMobile');
     toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
     mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
   </script>
+
 </body>
 </html>
