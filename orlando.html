@@ -111,6 +111,92 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px; text-align: center; font-size: 0.8rem; }
     @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr; gap: 24px; } .form-wrap { padding: 28px 20px; } }
   </style>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://liceconsultant.com"},
+      {"@type":"ListItem","position":2,"name":"Orlando Lice Removal","item":"https://liceconsultant.com/orlando"}
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does lice removal cost in Orlando?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our Orlando pricing: Head Screening $30/person (free when someone receives treatment), Full Air Treatment $170 long hair / $140 short hair (3\u201d and under), Express Treatment $160/person, Manual Comb-Out $150/hr. A $50 travel fee applies to all mobile appointments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you come to my home in Orlando?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — LCA Orlando is a mobile-only service. Our certified technician comes directly to your home anywhere in the Orlando metro area, bringing all professional equipment needed for treatment. No clinic visit required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a travel fee for Orlando mobile lice removal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, a $50 travel fee applies to all mobile appointments in the Orlando area. This covers the cost of our technician traveling to your home with all professional equipment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer same-day lice removal appointments in Orlando?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer same-day and next-day appointments in Orlando depending on availability. Call us or book online and we will confirm your appointment time promptly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is your lice treatment safe for children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Our treatment is 100% pesticide-free, using professional heated-air technology that is safe for children of all ages. No chemicals, no harsh shampoos — just a safe, effective, FDA-cleared method."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas around Orlando do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve all of Orlando and surrounding communities including Winter Park, Kissimmee, Sanford, Lake Mary, Altamonte Springs, Longwood, Casselberry, Oviedo, Windermere, Dr. Phillips, Celebration, Clermont, Apopka, Winter Garden, Maitland, Deltona, and the Daytona Beach area."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you treat the whole family in one visit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We can treat multiple family members during a single mobile appointment. Head screenings are free for anyone in the household when another family member receives treatment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your re-exposure policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you are re-exposed to lice within 30 days of your treatment, we will return and re-treat at 50% off. We also offer a 10-day guarantee — if you have any issues within 10 days of treatment, we will take care of it."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="announce-bar">Pesticide-free <span>·</span> Done in one visit <span>·</span> No homework &amp; no follow-up <span>·</span> We come to you</div>
@@ -292,5 +378,81 @@
       <p>© 2025 Lice Consultants of America. All rights reserved. &nbsp;·&nbsp; <a href="/" style="color:rgba(255,255,255,0.6);">liceconsultant.com</a></p>
     </div>
   </footer>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq" style="background:var(--gray-100);">
+    <div class="section-inner">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Everything you need to know about mobile lice removal in Orlando</p>
+      <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+
+        <details style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;">
+            How much does lice removal cost in Orlando? <span class="faq-icon">+</span>
+          </summary>
+          <p style="margin-top:12px;color:var(--gray-600);font-size:0.92rem;line-height:1.7;">Head Screening: $30/person (free when someone in the household receives treatment). Full Air Treatment: $170 long hair / $140 short hair (3&rdquo; and under). Express Treatment: $160/person. Manual Comb-Out: $150/hr. All mobile appointments include a <strong>$50 travel fee</strong>.</p>
+        </details>
+
+        <details style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;">
+            Do you come to my home in Orlando? <span class="faq-icon">+</span>
+          </summary>
+          <p style="margin-top:12px;color:var(--gray-600);font-size:0.92rem;line-height:1.7;">Yes &mdash; LCA Orlando is a <strong>mobile-only service</strong>. Our certified technician comes directly to your home anywhere in the Orlando metro area, bringing all professional equipment. No clinic visit, no driving, no waiting rooms.</p>
+        </details>
+
+        <details style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;">
+            Is there a travel fee? <span class="faq-icon">+</span>
+          </summary>
+          <p style="margin-top:12px;color:var(--gray-600);font-size:0.92rem;line-height:1.7;">Yes, a <strong>$50 travel fee</strong> applies to all mobile appointments in the Orlando area. This covers the cost of our technician traveling to your home with all professional heated-air equipment.</p>
+        </details>
+
+        <details style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;">
+            Do you offer same-day appointments in Orlando? <span class="faq-icon">+</span>
+          </summary>
+          <p style="margin-top:12px;color:var(--gray-600);font-size:0.92rem;line-height:1.7;">Yes &mdash; we offer same-day and next-day appointments subject to availability. Call us or book online and we&rsquo;ll confirm your appointment time within an hour during business hours.</p>
+        </details>
+
+        <details style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;">
+            Is the treatment safe for young children? <span class="faq-icon">+</span>
+          </summary>
+          <p style="margin-top:12px;color:var(--gray-600);font-size:0.92rem;line-height:1.7;">Absolutely. Our method is <strong>100% pesticide-free</strong>, using professional heated-air technology that is safe for children of all ages. No harsh chemicals, no shampoos &mdash; just a safe, effective, FDA-cleared treatment.</p>
+        </details>
+
+        <details style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;">
+            What areas around Orlando do you serve? <span class="faq-icon">+</span>
+          </summary>
+          <p style="margin-top:12px;color:var(--gray-600);font-size:0.92rem;line-height:1.7;">We serve all of Orlando and surrounding communities including Winter Park, Kissimmee, Sanford, Lake Mary, Altamonte Springs, Longwood, Casselberry, Oviedo, Windermere, Dr. Phillips, Celebration, Clermont, Apopka, Winter Garden, Maitland, Deltona, and the Daytona Beach area. Not sure if we cover you? Give us a call.</p>
+        </details>
+
+        <details style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;">
+            Can you treat our whole family in one visit? <span class="faq-icon">+</span>
+          </summary>
+          <p style="margin-top:12px;color:var(--gray-600);font-size:0.92rem;line-height:1.7;">Yes &mdash; we can treat multiple family members in a single mobile appointment. Head screenings are free for anyone in the household when another family member receives treatment.</p>
+        </details>
+
+        <details style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;">
+            What is your re-exposure guarantee? <span class="faq-icon">+</span>
+          </summary>
+          <p style="margin-top:12px;color:var(--gray-600);font-size:0.92rem;line-height:1.7;">We offer a <strong>10-day guarantee</strong> &mdash; if you have any issues within 10 days of treatment, we&rsquo;ll take care of it. Plus, if you&rsquo;re re-exposed to lice within <strong>30 days</strong>, we&rsquo;ll return and re-treat at <strong>50% off</strong>.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('details').forEach(d => {
+      d.addEventListener('toggle', () => {
+        const icon = d.querySelector('.faq-icon');
+        if (icon) icon.textContent = d.open ? '−' : '+';
+      });
+    });
+  </script>
 </body>
 </html>
