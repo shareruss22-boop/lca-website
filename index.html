@@ -212,14 +212,11 @@
     }
     .nav__mobile {
       display: none;
-      position: absolute;
-      top: 68px;
-      left: 0;
-      right: 0;
       background: var(--white);
-      border-top: 2px solid var(--blue-mist);
-      border-bottom: 1px solid var(--blue-mist);
+      border-bottom: 2px solid var(--blue-mist);
       padding: 8px 24px 24px;
+      position: sticky;
+      top: 68px;
       z-index: 99;
       box-shadow: 0 8px 24px rgba(27,42,107,0.12);
     }
@@ -801,19 +798,19 @@
         <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="nav__mobile" id="navMobile">
-      <ul>
-        <li><a href="#locations">Locations</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#why-lca">Why LCA</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get in Touch</a>
-    </div>
   </nav>
+  <div class="nav__mobile" id="navMobile">
+    <ul>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#why-lca">Why LCA</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get in Touch</a>
+  </div>
 
   <!-- HERO -->
   <section class="hero">

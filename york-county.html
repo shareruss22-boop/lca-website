@@ -201,6 +201,21 @@
     .footer-col li a:hover { color: var(--white); }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px; text-align: center; font-size: 0.8rem; }
 
+    /* Mobile hamburger */
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; border-radius: 2px; }
+    .mobile-nav { display: none; background: var(--white); border-bottom: 2px solid var(--blue-mist); padding: 8px 24px 20px; position: sticky; top: 64px; z-index: 99; box-shadow: 0 8px 24px rgba(27,42,107,0.12); }
+    .mobile-nav.open { display: block; }
+    .mobile-nav a { display: block; padding: 12px 0; font-size: 0.95rem; font-weight: 600; color: var(--gray-700); border-bottom: 1px solid var(--blue-mist); }
+    .mobile-nav a:last-child { border-bottom: none; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+      section { padding: 40px 16px !important; }
+      h1, h2 { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
+      [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    }
     @media (max-width: 640px) {
       .form-row { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -225,7 +240,18 @@
       <a href="/blog">Blog</a>
       <a href="tel:619-771-9988" class="btn-nav">Call Now</a>
     </div>
+    <button class="nav-hamburger" onclick="document.getElementById('yorkMobileNav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <div class="mobile-nav" id="yorkMobileNav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/san-diego">San Diego</a>
+    <a href="/orlando">Orlando</a>
+    <a href="/blog">Blog</a>
+    <a href="tel:619-771-9988">Call 619-771-9988</a>
+  </div>
 
   <section class="hero">
     <div>
