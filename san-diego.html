@@ -259,8 +259,18 @@
       <button class="nav__toggle" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
-    </div>
+    
+      <button class="nav-hamburger" onclick="document.getElementById('sdMobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button></div>
   </nav>
+  <div id="sdMobileNav" style="display:none;background:#fff;border-bottom:2px solid #D4E8F5;padding:8px 24px 20px;position:sticky;top:64px;z-index:99;box-shadow:0 8px 24px rgba(27,42,107,0.12);">
+    <style>#sdMobileNav.open{display:block!important;}.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;}#sdMobileNav a{display:block;padding:12px 0;font-size:0.95rem;font-weight:600;color:#374151;border-bottom:1px solid #D4E8F5;text-decoration:none;}#sdMobileNav a:last-child{border-bottom:none;}@media(max-width:768px){.nav__links,.nav__actions .btn,.nav__phone{display:none!important;}.nav-hamburger{display:block!important;}}</style>
+    <a href="/" onclick="document.getElementById('sdMobileNav').classList.remove('open')">Home</a>
+    <a href="/about">About</a>
+    <a href="/orlando">Orlando</a>
+    <a href="/york-county">York County</a>
+    <a href="/blog">Blog</a>
+    <a href="#contact" onclick="document.getElementById('sdMobileNav').classList.remove('open')">Contact</a>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
