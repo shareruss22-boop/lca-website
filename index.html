@@ -794,22 +794,22 @@
         </div>
         <a href="#contact" class="btn btn-primary">Get in Touch</a>
       </div>
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+      <button class="nav__toggle" onclick="document.getElementById('navMobile').classList.toggle('open')" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
   <div class="nav__mobile" id="navMobile">
     <ul>
-      <li><a href="#locations">Locations</a></li>
-      <li><a href="#how-it-works">How It Works</a></li>
-      <li><a href="#why-lca">Why LCA</a></li>
+      <li><a href="#locations" onclick="document.getElementById('navMobile').classList.remove('open')">Locations</a></li>
+      <li><a href="#how-it-works" onclick="document.getElementById('navMobile').classList.remove('open')">How It Works</a></li>
+      <li><a href="#why-lca" onclick="document.getElementById('navMobile').classList.remove('open')">Why LCA</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a></li>
+      <li><a href="#contact" onclick="document.getElementById('navMobile').classList.remove('open')">Contact</a></li>
     </ul>
-    <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get in Touch</a>
+    <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="document.getElementById('navMobile').classList.remove('open')">Get in Touch</a>
   </div>
 
   <!-- HERO -->
