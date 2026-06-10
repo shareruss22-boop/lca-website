@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lice Removal Blog | Tips, Facts & Expert Advice | LCA</title>
+  <meta name="description" content="Expert advice on lice removal, prevention, and detection from the team at LCA Lice Consultants of America. Pesticide-free tips for parents and families." />
+  <link rel="canonical" href="https://liceconsultant.com/blog" />
+  <meta property="og:title" content="Lice Removal Blog | LCA Lice Consultants of America" />
+  <meta property="og:description" content="Expert tips on lice prevention, detection, and treatment from LCA's certified technicians." />
+  <meta property="og:url" content="https://liceconsultant.com/blog" />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "LCA Lice Consultants Blog",
+    "url": "https://liceconsultant.com/blog",
+    "description": "Expert lice removal tips, prevention advice, and family health information from LCA Lice Consultants of America."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --navy: #1B2A6B; --blue: #2D8CC4; --blue-pale: #EBF4FB;
+      --blue-mist: #D4E8F5; --gray-100: #F7F9FC; --gray-200: #E8EDF5;
+      --gray-500: #6B7280; --gray-600: #5A6478; --gray-700: #374151;
+      --gray-800: #1E2533; --white: #FFFFFF;
+      --radius: 12px; --shadow: 0 2px 16px rgba(27,42,107,0.10);
+      --shadow-lg: 0 8px 32px rgba(27,42,107,0.14);
+    }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-800); background: var(--white); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    .announce-bar { background: var(--navy); color: var(--white); text-align: center; padding: 10px 16px; font-size: 0.82rem; font-weight: 500; }
+    .announce-bar a { color: var(--blue-mist); text-decoration: underline; margin-left: 6px; }
+
+    nav { background: var(--white); border-bottom: 1px solid var(--gray-200); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(27,42,107,0.07); }
+    .nav-logo img { height: 48px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--gray-600); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-links .btn-nav { background: var(--blue); color: var(--white); padding: 8px 18px; border-radius: 8px; font-weight: 600; font-size: 0.88rem; transition: background 0.2s; }
+    .nav-links .btn-nav:hover { background: var(--navy); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; border-radius: 2px; }
+    .mobile-nav { display: none; }
+
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, #2563A8 100%); color: var(--white); padding: 64px 24px 72px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); border-radius: 24px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(1.75rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+    .hero p { font-size: 1.05rem; opacity: 0.88; max-width: 520px; margin: 0 auto; }
+
+    .blog-section { padding: 72px 24px; }
+    .blog-inner { max-width: 1080px; margin: 0 auto; }
+
+    .featured-post { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; background: var(--white); border: 1px solid var(--gray-200); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); margin-bottom: 64px; }
+    .featured-img { height: 360px; background: linear-gradient(135deg, var(--blue-pale) 0%, var(--blue-mist) 100%); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+    .featured-content { padding: 40px 40px 40px 0; }
+    .post-tag { display: inline-block; background: var(--blue-pale); color: var(--blue); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 24px; margin-bottom: 14px; }
+    .featured-content h2 { font-size: 1.6rem; font-weight: 800; color: var(--navy); line-height: 1.25; margin-bottom: 14px; }
+    .featured-content p { color: var(--gray-600); font-size: 0.95rem; line-height: 1.75; margin-bottom: 24px; }
+    .post-meta { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 20px; }
+    .btn-read { display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: var(--white); padding: 11px 24px; border-radius: var(--radius); font-weight: 600; font-size: 0.88rem; transition: background 0.2s; }
+    .btn-read:hover { background: var(--blue); }
+
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+    .posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 32px; }
+    .post-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
+    .post-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .post-thumb { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+    .post-thumb-1 { background: linear-gradient(135deg, #EBF4FB 0%, #D4E8F5 100%); }
+    .post-thumb-2 { background: linear-gradient(135deg, #E8F5EE 0%, #C8EDD8 100%); }
+    .post-thumb-3 { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); }
+    .post-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .post-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); line-height: 1.35; margin-bottom: 10px; }
+    .post-body p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.7; flex: 1; margin-bottom: 18px; }
+    .post-footer { display: flex; align-items: center; justify-content: space-between; }
+    .post-date { font-size: 0.78rem; color: var(--gray-500); }
+    .post-link { font-size: 0.85rem; font-weight: 600; color: var(--blue); }
+    .post-link:hover { color: var(--navy); }
+
+    .cta-strip { background: var(--blue-pale); border-radius: 16px; padding: 48px 40px; text-align: center; margin-top: 64px; }
+    .cta-strip h2 { font-size: 1.6rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+    .cta-strip p { color: var(--gray-600); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .btn-primary { background: var(--navy); color: var(--white); padding: 13px 30px; border-radius: var(--radius); font-weight: 700; font-size: 0.95rem; transition: background 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--blue); }
+
+    footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 40px 24px; text-align: center; font-size: 0.85rem; }
+    footer a { color: rgba(255,255,255,0.8); margin: 0 12px; }
+    footer a:hover { color: var(--white); }
+    .footer-links { margin-bottom: 16px; }
+
+    @media (max-width: 900px) {
+      .featured-post { grid-template-columns: 1fr; }
+      .featured-img { height: 220px; }
+      .featured-content { padding: 28px; }
+      .posts-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+      .mobile-nav.open { display: flex; flex-direction: column; background: var(--white); border-top: 1px solid var(--gray-200); padding: 12px 0; position: absolute; top: 64px; left: 0; right: 0; box-shadow: var(--shadow-lg); z-index: 99; }
+      .mobile-nav a { padding: 13px 24px; font-size: 0.95rem; font-weight: 500; color: var(--gray-700); border-bottom: 1px solid var(--gray-200); }
+      .posts-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announce-bar">
+    Formerly Lice Clinics of America — Same amazing team, same amazing service. &nbsp;|&nbsp; Call us: <a href="tel:619-771-9988">619-771-9988</a>
+  </div>
+
+  <nav>
+    <a href="/" class="nav-logo"><img src="/images/lca-logo.png" alt="LCA Lice Consultants of America" /></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/san-diego">San Diego</a>
+      <a href="/orlando">Orlando</a>
+      <a href="/york-county">York County</a>
+      <a href="/blog" class="active">Blog</a>
+      <a href="/#book" class="btn-nav">Book Now</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-nav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/san-diego">San Diego</a>
+    <a href="/orlando">Orlando</a>
+    <a href="/york-county">York County</a>
+    <a href="/blog">Blog</a>
+    <a href="/#book">Book Now</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-badge">📝 LCA Blog</div>
+    <h1>Lice Tips, Facts &amp; Expert Advice</h1>
+    <p>Straight-talk guidance from our certified technicians — because an informed family is a prepared family.</p>
+  </section>
+
+  <section class="blog-section">
+    <div class="blog-inner">
+
+      <!-- Featured Post -->
+      <div class="featured-post">
+        <div class="featured-img">🔍</div>
+        <div class="featured-content">
+          <span class="post-tag">Detection</span>
+          <div class="post-meta">June 2025 &nbsp;·&nbsp; 5 min read</div>
+          <h2>How to Check for Lice: A Step-by-Step Guide for Parents</h2>
+          <p>That persistent scratching could mean lice — or it could be something else entirely. Here's exactly how to check your child's hair the right way, what you're looking for, and when to call in a professional.</p>
+          <a href="/blog/how-to-check-for-lice" class="btn-read">Read Article →</a>
+        </div>
+      </div>
+
+      <!-- Post Grid -->
+      <div class="section-label">All Articles</div>
+      <div class="posts-grid">
+
+        <a href="/blog/how-to-check-for-lice" class="post-card">
+          <div class="post-thumb post-thumb-1">🔍</div>
+          <div class="post-body">
+            <span class="post-tag">Detection</span>
+            <h3>How to Check for Lice: A Step-by-Step Guide for Parents</h3>
+            <p>Learn the correct way to inspect hair for lice and nits, what tools you need, and the signs that confirm an infestation.</p>
+            <div class="post-footer">
+              <span class="post-date">June 2025</span>
+              <span class="post-link">Read more →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/blog/lice-vs-dandruff" class="post-card">
+          <div class="post-thumb post-thumb-2">🤔</div>
+          <div class="post-body">
+            <span class="post-tag">Education</span>
+            <h3>Lice vs. Dandruff: How to Tell the Difference</h3>
+            <p>White flakes in the hair don't always mean lice — but how do you know for sure? We break down exactly what to look for.</p>
+            <div class="post-footer">
+              <span class="post-date">June 2025</span>
+              <span class="post-link">Read more →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/blog/back-to-school-lice-prevention" class="post-card">
+          <div class="post-thumb post-thumb-3">🎒</div>
+          <div class="post-body">
+            <span class="post-tag">Prevention</span>
+            <h3>Back to School Lice Prevention: 8 Tips Every Parent Should Know</h3>
+            <p>School season is lice season. Here's what actually works to keep your kids protected all year long.</p>
+            <div class="post-footer">
+              <span class="post-date">June 2025</span>
+              <span class="post-link">Read more →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- CTA Strip -->
+      <div class="cta-strip">
+        <h2>Found lice? We can help today.</h2>
+        <p>One visit. No pesticides. Guaranteed results. Our certified technicians are ready to help your family get lice-free fast.</p>
+        <a href="tel:619-771-9988" class="btn-primary">Call 619-771-9988</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/san-diego">San Diego</a>
+      <a href="/orlando">Orlando</a>
+      <a href="/york-county">York County</a>
+      <a href="/blog">Blog</a>
+    </div>
+    <p>© 2025 LCA Lice Consultants of America. Formerly known as Lice Clinics of America.</p>
+  </footer>
+
+</body>
+</html>
