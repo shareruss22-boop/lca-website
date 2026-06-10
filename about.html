@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About LCA | Lice Consultants of America â Our Story & Team</title>
-  <meta name="description" content="Learn about LCA Lice Consultants of America â trusted by thousands of families since 2014. FDA-cleared, pesticide-free lice removal in San Diego, Orlando, and York County SC." />
+  <title>About Nicole Sanders | LCA Lice Consultants of America</title>
+  <meta name="description" content="Meet Nicole Sanders — founder and owner of LCA Lice Consultants of America. A military spouse, entrepreneur, and mother of three dedicated to pesticide-free lice removal since 2014." />
   <link rel="canonical" href="https://liceconsultant.com/about" />
 
-  <meta property="og:title" content="About LCA | Lice Consultants of America" />
-  <meta property="og:description" content="Trusted by thousands of families since 2014. FDA-cleared, pesticide-free lice removal done in one visit." />
+  <meta property="og:title" content="About Nicole Sanders | LCA Lice Consultants of America" />
+  <meta property="og:description" content="Meet the founder behind LCA — Nicole Sanders, entrepreneur, advocate, and mother of three." />
   <meta property="og:url" content="https://liceconsultant.com/about" />
   <meta property="og:type" content="website" />
 
@@ -18,8 +18,22 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type":"ListItem","position":1,"name":"Home","item":"https://liceconsultant.com"},
-      {"@type":"ListItem","position":2,"name":"About LCA","item":"https://liceconsultant.com/about"}
+      {"@type":"ListItem","position":2,"name":"About Nicole","item":"https://liceconsultant.com/about"}
     ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nicole Sanders",
+    "jobTitle": "Founder & Owner",
+    "worksFor": {
+      "@type": "LocalBusiness",
+      "name": "LCA Lice Consultants of America"
+    },
+    "description": "Founder of LCA Lice Consultants of America, entrepreneur, community advocate, and mother of three."
   }
   </script>
 
@@ -40,7 +54,9 @@
       --green-pale: #E8F5EE;
       --gray-100: #F7F9FC;
       --gray-200: #E8EDF5;
+      --gray-500: #6B7280;
       --gray-600: #5A6478;
+      --gray-700: #374151;
       --gray-800: #1E2533;
       --white: #FFFFFF;
       --radius: 12px;
@@ -51,15 +67,15 @@
     body { font-family: 'Inter', sans-serif; color: var(--gray-800); background: var(--white); line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
 
-    /* ââ ANNOUNCEMENT BAR ââ */
+    /* ── ANNOUNCEMENT BAR ── */
     .announce-bar {
       background: var(--navy); color: var(--white);
       text-align: center; padding: 10px 16px;
       font-size: 0.82rem; font-weight: 500; letter-spacing: 0.02em;
     }
-    .announce-bar span { margin: 0 10px; opacity: 0.55; }
+    .announce-bar a { color: var(--blue-mist); text-decoration: underline; margin-left: 6px; }
 
-    /* ââ NAV ââ */
+    /* ── NAV ── */
     nav {
       background: var(--white); border-bottom: 1px solid var(--gray-200);
       padding: 0 24px; display: flex; align-items: center;
@@ -70,180 +86,187 @@
     .nav-logo img { height: 48px; width: auto; display: block; }
     .nav-links { display: flex; gap: 24px; align-items: center; }
     .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--gray-600); transition: color 0.2s; }
-    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
     .nav-links .btn-nav {
       background: var(--blue); color: var(--white);
       padding: 8px 18px; border-radius: 8px;
       font-weight: 600; font-size: 0.88rem; transition: background 0.2s;
     }
     .nav-links .btn-nav:hover { background: var(--navy); }
-    .nav-back { font-size: 0.85rem; color: var(--blue); font-weight: 500; }
-    .nav-back:hover { color: var(--navy); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; border-radius: 2px; }
+    .mobile-nav { display: none; }
 
-    /* ââ HERO ââ */
+    /* ── HERO ── */
     .hero {
       background: linear-gradient(135deg, var(--navy) 0%, #2563A8 100%);
-      color: var(--white); padding: 72px 24px 80px; text-align: center;
+      color: var(--white); padding: 80px 24px 90px; text-align: center;
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 24px; padding: 6px 16px;
-      font-size: 0.82rem; font-weight: 600;
-      letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 24px; padding: 6px 18px;
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; margin-bottom: 24px;
     }
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem); font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800;
       line-height: 1.15; margin-bottom: 20px;
       max-width: 720px; margin-left: auto; margin-right: auto;
     }
-    .hero p { font-size: 1.1rem; opacity: 0.88; max-width: 580px; margin: 0 auto; }
+    .hero p {
+      font-size: 1.1rem; opacity: 0.88;
+      max-width: 580px; margin: 0 auto;
+    }
 
-    /* ââ SECTIONS ââ */
-    .section { padding: 72px 24px; }
-    .section-inner { max-width: 1040px; margin: 0 auto; }
-    .section-title { font-size: 1.75rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
-    .section-sub { color: var(--gray-600); font-size: 1rem; margin-bottom: 40px; }
+    /* ── MEET NICOLE ── */
+    .meet-section { padding: 80px 24px; }
+    .meet-inner { max-width: 1080px; margin: 0 auto; }
+    .meet-grid {
+      display: grid; grid-template-columns: 420px 1fr; gap: 64px; align-items: start;
+    }
+    .meet-photo-wrap { position: relative; }
+    .meet-photo {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .meet-photo img { width: 100%; height: 540px; object-fit: cover; object-position: center top; display: block; }
+    .meet-photo-badge {
+      position: absolute; bottom: -18px; left: 24px;
+      background: var(--navy); color: var(--white);
+      border-radius: var(--radius); padding: 14px 22px;
+      box-shadow: var(--shadow-lg);
+    }
+    .meet-photo-badge .badge-name { font-size: 1rem; font-weight: 800; }
+    .meet-photo-badge .badge-title { font-size: 0.78rem; color: var(--blue-mist); font-weight: 500; margin-top: 2px; }
+    .meet-content { padding-top: 8px; }
+    .section-label {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+    }
+    .meet-content h2 {
+      font-size: clamp(1.75rem, 3vw, 2.4rem); font-weight: 800;
+      color: var(--navy); line-height: 1.2; margin-bottom: 24px;
+    }
+    .meet-content p {
+      color: var(--gray-600); font-size: 1rem; line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .meet-highlight {
+      background: var(--blue-pale); border-left: 4px solid var(--blue);
+      padding: 18px 22px; border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy); font-weight: 600;
+      font-size: 1.05rem; line-height: 1.6;
+    }
+    .meet-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .meet-tag {
+      background: var(--blue-pale); color: var(--navy);
+      border-radius: 24px; padding: 6px 16px;
+      font-size: 0.82rem; font-weight: 600;
+    }
 
-    /* ââ STORY ââ */
+    /* ── STORY SECTION ── */
+    .story-section { background: var(--gray-100); padding: 80px 24px; }
+    .story-inner { max-width: 1080px; margin: 0 auto; }
     .story-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+      margin-top: 48px;
     }
-    .story-text h2 { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 20px; }
-    .story-text p { color: var(--gray-600); margin-bottom: 16px; font-size: 1rem; line-height: 1.75; }
-    .story-text .highlight {
-      background: var(--blue-pale); border-left: 4px solid var(--blue);
-      padding: 16px 20px; border-radius: 0 var(--radius) var(--radius) 0;
-      margin: 24px 0; font-style: italic; color: var(--navy); font-weight: 500;
-    }
-    .story-img { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); }
-    .story-img img { width: 100%; height: 420px; object-fit: cover; display: block; }
+    .story-text p { color: var(--gray-600); margin-bottom: 18px; font-size: 1rem; line-height: 1.78; }
+    .story-text h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin: 28px 0 10px; }
 
-    /* ââ TIMELINE ââ */
-    .timeline { position: relative; padding-left: 32px; }
-    .timeline::before {
-      content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
-      width: 2px; background: var(--blue-mist);
-    }
-    .timeline-item { position: relative; margin-bottom: 32px; }
-    .timeline-dot {
-      position: absolute; left: -28px; top: 4px;
-      width: 16px; height: 16px; border-radius: 50%;
-      background: var(--blue); border: 3px solid var(--white);
-      box-shadow: 0 0 0 2px var(--blue);
-    }
-    .timeline-year { font-size: 0.8rem; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
-    .timeline-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-    .timeline-desc { font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; }
-
-    /* ââ METHOD CARDS ââ */
-    .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-    .method-card {
-      background: var(--white); border: 1px solid var(--gray-200);
-      border-radius: var(--radius); padding: 28px 24px;
-      box-shadow: var(--shadow); text-align: center;
-    }
-    .method-icon { font-size: 2rem; margin-bottom: 14px; }
-    .method-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-    .method-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; }
-
-    /* ââ STAT STRIP ââ */
-    .stat-strip {
+    /* ── STATS ── */
+    .stats-section {
       background: var(--navy); color: var(--white);
-      padding: 48px 24px; text-align: center;
+      padding: 56px 24px;
     }
-    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto; }
-    .stat-num { font-size: 2.5rem; font-weight: 800; color: var(--blue); line-height: 1; margin-bottom: 8px; }
-    .stat-label { font-size: 0.88rem; opacity: 0.8; }
+    .stats-inner { max-width: 1080px; margin: 0 auto; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+    .stat-num { font-size: 2.4rem; font-weight: 800; color: var(--white); }
+    .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 4px; font-weight: 500; }
 
-    /* ââ TEAM ââ */
-    .team-intro {
-      background: var(--green-pale); border: 1px solid rgba(46,125,79,0.2);
-      border-radius: var(--radius); padding: 28px 32px; margin-bottom: 36px;
+    /* ── MISSION / VALUES ── */
+    .values-section { padding: 80px 24px; }
+    .values-inner { max-width: 1080px; margin: 0 auto; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
+    .value-card {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--radius); padding: 32px 28px;
+      box-shadow: var(--shadow);
     }
-    .team-intro h3 { color: var(--green); font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
-    .team-intro p { color: var(--gray-600); font-size: 0.95rem; line-height: 1.7; }
+    .value-icon { font-size: 2.2rem; margin-bottom: 16px; }
+    .value-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .value-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; }
 
-    /* ââ PHOTO GRID ââ */
-    .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .photo-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-    .photo-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
-    .photo-card-label {
-      padding: 16px 20px; background: var(--white);
-      border: 1px solid var(--gray-200); border-top: none;
-      border-radius: 0 0 var(--radius) var(--radius);
+    /* ── LOCATIONS ── */
+    .locations-section { background: var(--blue-pale); padding: 80px 24px; }
+    .locations-inner { max-width: 1080px; margin: 0 auto; }
+    .locations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .location-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 28px 24px; box-shadow: var(--shadow);
     }
-    .photo-card-label h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-    .photo-card-label p { font-size: 0.82rem; color: var(--gray-600); }
+    .loc-flag { font-size: 1.8rem; margin-bottom: 14px; }
+    .location-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .location-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 14px; }
+    .loc-link {
+      font-size: 0.85rem; font-weight: 600; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .loc-link:hover { color: var(--navy); }
 
-    /* ââ GUARANTEE ââ */
-    .guarantee-box {
-      background: var(--blue-pale); border-radius: 16px;
-      padding: 40px; text-align: center; max-width: 720px; margin: 0 auto;
-    }
-    .guarantee-box h3 { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 14px; }
-    .guarantee-box p { color: var(--gray-600); font-size: 1rem; line-height: 1.7; margin-bottom: 8px; }
-    .guarantee-items { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
-    .guarantee-item {
-      background: var(--white); border-radius: 10px;
-      padding: 14px 20px; font-size: 0.9rem; font-weight: 600;
-      color: var(--navy); box-shadow: var(--shadow);
-    }
-
-    /* ââ CTA ââ */
+    /* ── CTA ── */
     .cta-section {
       background: linear-gradient(135deg, var(--navy) 0%, #2563A8 100%);
-      padding: 72px 24px; text-align: center; color: var(--white);
+      padding: 80px 24px; text-align: center; color: var(--white);
     }
-    .cta-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 14px; }
-    .cta-section p { font-size: 1.05rem; opacity: 0.85; margin-bottom: 32px; max-width: 540px; margin-left: auto; margin-right: auto; }
-    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
+    .cta-section h2 { font-size: clamp(1.75rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 16px; }
+    .cta-section p { font-size: 1.05rem; opacity: 0.88; margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
       background: var(--white); color: var(--navy);
-      font-weight: 700; font-size: 1rem; padding: 14px 28px;
-      border-radius: 10px; transition: transform 0.15s, box-shadow 0.15s;
+      padding: 14px 32px; border-radius: var(--radius);
+      font-weight: 700; font-size: 0.95rem; transition: transform 0.15s;
     }
-    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
-    .btn-secondary {
-      background: transparent; color: var(--white);
-      font-weight: 600; font-size: 1rem; padding: 14px 28px;
-      border-radius: 10px; border: 2px solid rgba(255,255,255,0.5);
-      transition: border-color 0.2s, background 0.2s;
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-outline-white {
+      border: 2px solid rgba(255,255,255,0.6); color: var(--white);
+      padding: 14px 32px; border-radius: var(--radius);
+      font-weight: 600; font-size: 0.95rem; transition: border-color 0.2s;
     }
-    .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+    .btn-outline-white:hover { border-color: var(--white); }
 
-    /* ââ FOOTER ââ */
+    /* ── FOOTER ── */
     footer {
-      background: var(--navy); color: rgba(255,255,255,0.75);
-      padding: 48px 24px 32px;
+      background: var(--navy); color: rgba(255,255,255,0.7);
+      padding: 40px 24px; text-align: center; font-size: 0.85rem;
     }
-    .footer-inner {
-      max-width: 1040px; margin: 0 auto;
-      display: grid; grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px; margin-bottom: 40px;
-    }
-    .footer-brand { font-size: 1.1rem; font-weight: 800; color: var(--white); margin-bottom: 10px; }
-    .footer-brand span { color: var(--blue); }
-    .footer-desc { font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px; }
-    .footer-contact { font-size: 0.88rem; line-height: 2; }
-    .footer-contact a { color: rgba(255,255,255,0.75); }
-    .footer-col h4 { color: var(--white); font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-col li a { font-size: 0.88rem; color: rgba(255,255,255,0.7); transition: color 0.2s; }
-    .footer-col li a:hover { color: var(--white); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.12);
-      padding-top: 24px; text-align: center; font-size: 0.8rem;
-    }
+    footer a { color: rgba(255,255,255,0.8); margin: 0 12px; }
+    footer a:hover { color: var(--white); }
+    .footer-links { margin-bottom: 16px; }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+      .mobile-nav.open {
+        display: flex; flex-direction: column; gap: 0;
+        background: var(--white); border-top: 1px solid var(--gray-200);
+        padding: 12px 0; position: absolute; top: 64px; left: 0; right: 0;
+        box-shadow: var(--shadow-lg); z-index: 99;
+      }
+      .mobile-nav a {
+        padding: 13px 24px; font-size: 0.95rem; font-weight: 500;
+        color: var(--gray-700); border-bottom: 1px solid var(--gray-200);
+      }
+      .meet-grid { grid-template-columns: 1fr; gap: 40px; }
+      .meet-photo img { height: 400px; }
+      .meet-photo-badge { bottom: -16px; }
+      .meet-content { padding-top: 32px; }
       .story-grid { grid-template-columns: 1fr; gap: 32px; }
-      .story-img { order: -1; }
-      .story-img img { height: 260px; }
-      .footer-inner { grid-template-columns: 1fr; gap: 24px; }
-    }
-    @media (max-width: 640px) {
-      .nav-links .nav-back { display: none; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .locations-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -251,80 +274,133 @@
 
   <!-- Announcement Bar -->
   <div class="announce-bar">
-    Pesticide-free <span>Â·</span> Done in one visit <span>Â·</span> No homework &amp; no follow-up <span>Â·</span> Trusted since 2014
+    Formerly Lice Clinics of America — Same amazing team, same amazing service. &nbsp;|&nbsp; Call us: <a href="tel:619-771-9988">619-771-9988</a>
   </div>
 
   <!-- Nav -->
   <nav>
     <a href="/" class="nav-logo"><img src="/images/lca-logo.PNG" alt="LCA Lice Consultants of America" /></a>
     <div class="nav-links">
-      <a href="/" class="nav-back">â All Locations</a>
-      <a href="tel:XXXXXXXXXX" class="btn-nav">Call Now</a>
+      <a href="/">Home</a>
+      <a href="/about" class="active">About</a>
+      <a href="/san-diego">San Diego</a>
+      <a href="/orlando">Orlando</a>
+      <a href="/york-county">York County</a>
+      <a href="#book" class="btn-nav">Book Now</a>
     </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <div class="mobile-nav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/san-diego">San Diego</a>
+    <a href="/orlando">Orlando</a>
+    <a href="/york-county">York County</a>
+    <a href="#book">Book Now</a>
+  </div>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-badge">â Trusted Since 2014</div>
-    <h1>About Lice Consultants of America</h1>
-    <p>We've helped thousands of families get back to normal â lice-free, in a single visit, without any chemicals or follow-up appointments.</p>
+    <div class="hero-badge">✦ Meet the Founder</div>
+    <h1>Built by a Mom.<br>Trusted by Thousands.</h1>
+    <p>LCA was founded by Nicole Sanders — entrepreneur, military spouse, community advocate, and mother of three — with one simple goal: make lice removal fast, safe, and stress-free for every family.</p>
   </section>
 
-  <!-- Our Story -->
-  <section class="section" style="background:var(--white);">
-    <div class="section-inner">
-      <div class="story-grid">
-        <div class="story-text">
-          <h2>From San Diego to Across the Country</h2>
-          <p>LCA Lice Consultants of America began in 2014 as a premier lice removal clinic in San Diego, CA. Built on a foundation of professional care, pesticide-free methods, and guaranteed results, we quickly became one of the most trusted lice removal providers on the West Coast â serving thousands of families in San Diego, Encinitas, and Orange County.</p>
-          <p>As our reputation grew, so did our reach. We've since expanded to serve families in Rock Hill / York County, SC and the Orlando, FL metro area. No matter where you find us, you'll always get the same certified technicians, the same FDA-cleared technology, and the same commitment to getting your family lice-free in a single visit.</p>
-          <div class="highlight">
-            "Formerly known as Lice Clinics of America â same amazing team, same amazing service."
+  <!-- Meet Nicole -->
+  <section class="meet-section">
+    <div class="meet-inner">
+      <div class="meet-grid">
+
+        <div class="meet-photo-wrap">
+          <div class="meet-photo">
+            <img src="/images/Nicole.PNG" alt="Nicole Sanders, founder of LCA Lice Consultants of America" />
           </div>
-          <p>Our clinics are preferred providers in the LCAâ¢ network, held to rigorous standards for care, training, and treatment effectiveness.</p>
+          <div class="meet-photo-badge">
+            <div class="badge-name">Nicole Sanders</div>
+            <div class="badge-title">Founder &amp; Owner, LCA</div>
+          </div>
         </div>
-        <div class="story-img">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80" alt="LCA professional lice removal clinic" />
+
+        <div class="meet-content">
+          <div class="section-label">About Nicole</div>
+          <h2>A Career Built on Care, Leadership &amp; Community</h2>
+
+          <p>Nicole Sanders is a dynamic entrepreneur, community advocate, and mother of three whose career blends innovation, service, and heart. With an early background in music — writing, arranging, and performing live — Nicole developed a foundation of discipline, creativity, and connection that continues to define her leadership today.</p>
+
+          <p>After relocating to Southern California due to her husband Courtney's military orders, Nicole discovered the professional lice-removal industry and immediately recognized both its business potential and its life-changing impact on families. Through exceptional operational leadership, an uncompromising commitment to customer experience, and a natural ability to build and lead high-performing teams, she rose rapidly — ultimately becoming the owner and operator of multiple thriving clinics.</p>
+
+          <div class="meet-highlight">"I started in this industry as a technician and fell in love with helping families. There is nothing better than seeing the relief on a parent's face when we tell them — it's done."</div>
+
+          <p>Under Nicole's leadership, LCA has expanded across multiple states, serving families through both brick-and-mortar locations and mobile services. Her clinics are trusted partners to school districts, nurses, and community organizations, providing education, prevention programs, and rapid, compassionate care.</p>
+
+          <p>Philanthropy is central to Nicole's mission. She actively supports schools, donates services to families in need, and works to remove the stigma around scalp health through education and accessibility.</p>
+
+          <div class="meet-tags">
+            <span class="meet-tag">🎯 Entrepreneur</span>
+            <span class="meet-tag">💙 Mother of Three</span>
+            <span class="meet-tag">🎖️ Military Spouse</span>
+            <span class="meet-tag">🏫 Community Advocate</span>
+            <span class="meet-tag">🎵 Musician</span>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Timeline -->
-  <section class="section" style="background:var(--gray-100);">
-    <div class="section-inner">
-      <h2 class="section-title" style="text-align:center;margin-bottom:48px;">Our Journey</h2>
-      <div style="max-width:600px;margin:0 auto;">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">2014</div>
-            <div class="timeline-title">Founded in San Diego, CA</div>
-            <div class="timeline-desc">LCA opens its first clinic in San Diego, bringing professional FDA-cleared lice removal to Southern California families.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">2014â2020</div>
-            <div class="timeline-title">Growing Across Southern California</div>
-            <div class="timeline-desc">Expanded service across San Diego County, Encinitas, and Orange County. Thousands of families treated with zero pesticides.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">2022</div>
-            <div class="timeline-title">York County, SC â Rock Hill Clinic Opens</div>
-            <div class="timeline-desc">LCA expands to the East Coast with a new clinic at 1069 Bayshore Dr, Rock Hill, SC â serving York County and surrounding communities.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">2023</div>
-            <div class="timeline-title">Orlando, FL â Mobile Service Launches</div>
-            <div class="timeline-desc">LCA brings mobile lice removal to Orlando and the surrounding metro area â we come to you, no clinic visit needed.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background:var(--green);box-shadow:0 0 0 2px var(--green);"></div>
-            <div class="timeline-year">Today</div>
-            <div class="timeline-title">Serving Families Nationwide</div>
-            <div class="timeline-desc">Three service areas, thousands of satisfied families, and a mission that hasn't changed: get you lice-free in a single visit, safely and without chemicals.</div>
+  <!-- Our Story -->
+  <section class="story-section">
+    <div class="story-inner">
+      <div class="section-label">Our Origins</div>
+      <h2 style="font-size: clamp(1.75rem, 3vw, 2.2rem); font-weight: 800; color: var(--navy); max-width: 600px;">From One Clinic to a Nationwide Mission</h2>
+
+      <div class="story-grid">
+        <div class="story-text">
+          <p>LCA Lice Consultants &amp; Associates was born out of Nicole and Courtney Sanders' shared vision to create the best lice removal company — one built on genuine care for families and community.</p>
+
+          <p>After Nicole relocated to San Diego and began working for a lice removal company, her kind and courteous nature and her ability to truly listen to customers quickly made her the face of the organization. She recognized her talent for developing action plans and leading teams, earning multiple promotions along the way.</p>
+
+          <h3>Seeing the Opportunity</h3>
+          <p>Nicole and Courtney saw firsthand how stressful and confusing lice infestations are for families — and how few quality options existed. They founded Lice Consultants &amp; Associates to change that, starting in San Diego and Orange County and growing to serve families coast-to-coast.</p>
+
+          <h3>Growing with Purpose</h3>
+          <p>Today LCA operates clinics in San Diego, Orlando, and York County, SC — with Courtney's 20 years of community volunteer work shaping the company's commitment to giving back. They continue expanding, driven by the same motivation they had on day one: to be a trusted resource for every family dealing with lice.</p>
+        </div>
+
+        <div>
+          <!-- Timeline -->
+          <div style="position: relative; padding-left: 32px;">
+            <div style="position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--blue-mist);"></div>
+
+            <div style="position: relative; margin-bottom: 32px;">
+              <div style="position: absolute; left: -28px; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--blue);"></div>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;">2014</div>
+              <div style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 4px;">LCA Founded in San Diego</div>
+              <div style="font-size: 0.88rem; color: var(--gray-600); line-height: 1.6;">Nicole and Courtney open their first clinic, bringing pesticide-free lice removal to San Diego families.</div>
+            </div>
+
+            <div style="position: relative; margin-bottom: 32px;">
+              <div style="position: absolute; left: -28px; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--blue);"></div>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;">Growth</div>
+              <div style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Expansion to Multiple Locations</div>
+              <div style="font-size: 0.88rem; color: var(--gray-600); line-height: 1.6;">The clinic model proved so effective that LCA expanded to serve families across Southern California and beyond.</div>
+            </div>
+
+            <div style="position: relative; margin-bottom: 32px;">
+              <div style="position: absolute; left: -28px; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--blue);"></div>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;">East Coast</div>
+              <div style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Orlando &amp; York County, SC</div>
+              <div style="font-size: 0.88rem; color: var(--gray-600); line-height: 1.6;">LCA opens clinics in Orlando, FL and Rock Hill / York County, SC, bringing the same trusted care to the East Coast.</div>
+            </div>
+
+            <div style="position: relative;">
+              <div style="position: absolute; left: -28px; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--navy); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--navy);"></div>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;">Today</div>
+              <div style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Rebranded as LCA</div>
+              <div style="font-size: 0.88rem; color: var(--gray-600); line-height: 1.6;">Formerly known as Lice Clinics of America — same amazing team, same proven results. Now operating as Lice Consultants of America.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -332,201 +408,121 @@
   </section>
 
   <!-- Stats -->
-  <div class="stat-strip">
-    <div class="stat-grid">
-      <div>
-        <div class="stat-num">2014</div>
-        <div class="stat-label">Serving families since</div>
-      </div>
-      <div>
-        <div class="stat-num">99.2%</div>
-        <div class="stat-label">Nit &amp; lice kill rate</div>
-      </div>
-      <div>
-        <div class="stat-num">1</div>
-        <div class="stat-label">Visit to be lice-free</div>
-      </div>
-      <div>
-        <div class="stat-num">3</div>
-        <div class="stat-label">Service locations</div>
-      </div>
-      <div>
-        <div class="stat-num">0</div>
-        <div class="stat-label">Pesticides used</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Our Method -->
-  <section class="section" style="background:var(--white);">
-    <div class="section-inner">
-      <h2 class="section-title" style="text-align:center;">Our Method: FDA-Cleared Heated Air</h2>
-      <p class="section-sub" style="text-align:center;">The AirAllÃ©Â® device uses controlled warm air to dehydrate and kill lice and nits â no chemicals required</p>
-      <div class="method-grid">
-        <div class="method-card">
-          <div class="method-icon">ð¬</div>
-          <h3>FDA-Cleared Device</h3>
-          <p>Our AirAllÃ©Â® medical device is FDA-cleared and clinically proven to kill 99.2% of lice and nits in a single treatment session.</p>
+  <section class="stats-section">
+    <div class="stats-inner">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-num">2014</div>
+          <div class="stat-label">Serving Families Since</div>
         </div>
-        <div class="method-card">
-          <div class="method-icon">ð¡ï¸</div>
-          <h3>Heated Air Technology</h3>
-          <p>Controlled warm air dehydrates lice and their eggs at every stage of the lifecycle â without any pesticides, sprays, or shampoos.</p>
+        <div>
+          <div class="stat-num">99.2%</div>
+          <div class="stat-label">Lice &amp; Nit Kill Rate</div>
         </div>
-        <div class="method-card">
-          <div class="method-icon">â±ï¸</div>
-          <h3>One Hour. Done.</h3>
-          <p>Treatment is completed in approximately one hour. No products to apply at home, no follow-up appointments, no return visits.</p>
+        <div>
+          <div class="stat-num">1 Visit</div>
+          <div class="stat-label">Treatment, No Follow-Ups</div>
         </div>
-        <div class="method-card">
-          <div class="method-icon">ð§</div>
-          <h3>Safe for All Ages</h3>
-          <p>Because our method uses only heated air â not chemicals â it is safe for children of all ages, including young toddlers.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-icon">ð«</div>
-          <h3>Zero Pesticides</h3>
-          <p>No permethrin, no pyrethrin, no lindane. Our treatment is 100% pesticide-free and free from harmful chemicals of any kind.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-icon">â</div>
-          <h3>Proven Results</h3>
-          <p>Our method has been used to treat thousands of families since 2014, with consistently high success rates and satisfied clients.</p>
+        <div>
+          <div class="stat-num">3 Clinics</div>
+          <div class="stat-label">Across the U.S.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Team Photos -->
-  <section class="section" style="background:var(--gray-100);">
-    <div class="section-inner">
-      <h2 class="section-title" style="text-align:center;">Our Team &amp; Clinics</h2>
-      <p class="section-sub" style="text-align:center;">Professionally trained, certified, and dedicated to your family's care</p>
+  <!-- Values -->
+  <section class="values-section">
+    <div class="values-inner">
+      <div class="section-label">What We Stand For</div>
+      <h2 style="font-size: clamp(1.75rem, 3vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 12px;">Our Values</h2>
+      <p style="color: var(--gray-600); max-width: 540px;">Everything Nicole built at LCA comes back to the same core beliefs — the ones that guided her from her very first day as a technician.</p>
 
-      <div class="team-intro">
-        <h3>ð Certified &amp; Trained Technicians</h3>
-        <p>Every LCA technician undergoes professional training and certification in the AirAllÃ©Â® heated-air treatment method. Our technicians are skilled at responding to individual cases and will walk you through every step of the treatment process. When you come to LCA, you're in expert hands.</p>
-      </div>
-
-      <div class="photo-grid">
-        <div class="photo-card">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="LCA professional lice removal technician" />
-          <div class="photo-card-label">
-            <h4>Professional Care</h4>
-            <p>Certified technicians trained in FDA-cleared lice removal</p>
-          </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">💙</div>
+          <h3>Compassionate Care</h3>
+          <p>We know how stressful lice can be. Every client is treated with kindness, discretion, and zero judgment — because families deserve to feel supported, not shamed.</p>
         </div>
-        <div class="photo-card">
-          <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&q=80" alt="FDA-cleared AirAllÃ© lice removal device" />
-          <div class="photo-card-label">
-            <h4>FDA-Cleared Equipment</h4>
-            <p>The AirAllÃ©Â® device â 99.2% effective against lice and nits</p>
-          </div>
+        <div class="value-card">
+          <div class="value-icon">🔬</div>
+          <h3>Science-Backed Method</h3>
+          <p>Our FDA-cleared AirAllé® treatment uses heated air to kill lice and nits in a single visit with 99.2% effectiveness — no pesticides, no toxins, no repeat visits.</p>
         </div>
-        <div class="photo-card">
-          <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=600&q=80" alt="Happy family after lice treatment" />
-          <div class="photo-card-label">
-            <h4>Happy Families</h4>
-            <p>Thousands of families lice-free since 2014</p>
-          </div>
+        <div class="value-card">
+          <div class="value-icon">🏫</div>
+          <h3>Community First</h3>
+          <p>Nicole and Courtney are committed to giving back. We partner with schools, donate services to families in need, and provide lice education programs to communities we serve.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Guarantee -->
-  <section class="section" style="background:var(--blue-pale);">
-    <div class="section-inner">
-      <div class="guarantee-box">
-        <div style="font-size:2.5rem;margin-bottom:16px;">ð¡ï¸</div>
-        <h3>Our Treatment Guarantee</h3>
-        <p>We stand behind our work completely. If a lice infestation persists within 30 days of your treatment, we will re-treat you at no charge â no questions asked.</p>
-        <p>We are confident in the viability and effectiveness of our treatment, and we want every family to leave with total peace of mind.</p>
-        <div class="guarantee-items">
-          <div class="guarantee-item">â 10-Day Guarantee</div>
-          <div class="guarantee-item">â 30-Day Re-Exposure at 50% Off</div>
-          <div class="guarantee-item">â No Homework Required</div>
-          <div class="guarantee-item">â No Follow-Up Appointments</div>
+        <div class="value-card">
+          <div class="value-icon">⭐</div>
+          <h3>Excellence in Every Visit</h3>
+          <p>Every technician is trained personally by Nicole — not just in lice removal, but in customer service, empathy, and professionalism. We hold ourselves to the highest standard.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🛡️</div>
+          <h3>Our Guarantee</h3>
+          <p>If lice return within the treatment window, we come back at no extra charge. We stand behind our work because we know it works.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h3>Pesticide-Free Promise</h3>
+          <p>We will never use harsh chemicals on your child's head. Our method is 100% pesticide-free and safe for all ages — including newborns, pregnant moms, and sensitive scalps.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Locations -->
-  <section class="section" style="background:var(--white);">
-    <div class="section-inner">
-      <h2 class="section-title" style="text-align:center;">Find Us Near You</h2>
-      <p class="section-sub" style="text-align:center;">Three service areas â same trusted care</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+  <section class="locations-section">
+    <div class="locations-inner">
+      <div class="section-label">Find Us Near You</div>
+      <h2 style="font-size: clamp(1.75rem, 3vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 12px;">Our Clinics</h2>
+      <p style="color: var(--gray-600); margin-bottom: 48px; max-width: 500px;">From San Diego to South Carolina, LCA is ready to help your family today.</p>
 
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);">
-          <div style="font-size:1.5rem;margin-bottom:12px;">ð</div>
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px;">San Diego, CA</h3>
-          <p style="font-size:0.88rem;color:var(--gray-600);margin-bottom:16px;">In-clinic treatment at 5380 Clairemont Mesa Blvd, Suite 200. Serving all of San Diego County.</p>
-          <a href="/san-diego" style="color:var(--blue);font-weight:600;font-size:0.9rem;">View San Diego page &rarr;</a>
+      <div class="locations-grid">
+        <div class="location-card">
+          <div class="loc-flag">☀️</div>
+          <h3>San Diego, CA</h3>
+          <p>Our original home — serving San Diego families with compassionate, expert lice removal since 2014.</p>
+          <a href="/san-diego" class="loc-link">Learn more →</a>
         </div>
-
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);">
-          <div style="font-size:1.5rem;margin-bottom:12px;">âï¸</div>
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px;">Orlando, FL</h3>
-          <p style="font-size:0.88rem;color:var(--gray-600);margin-bottom:16px;">Mobile service â we come to your home anywhere in the Orlando metro area. $50 travel fee applies.</p>
-          <a href="/orlando" style="color:var(--blue);font-weight:600;font-size:0.9rem;">View Orlando page &rarr;</a>
+        <div class="location-card">
+          <div class="loc-flag">🌴</div>
+          <h3>Orlando, FL</h3>
+          <p>Bringing pesticide-free lice treatment to Orlando and surrounding Central Florida communities.</p>
+          <a href="/orlando" class="loc-link">Learn more →</a>
         </div>
-
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);">
-          <div style="font-size:1.5rem;margin-bottom:12px;">ð¿</div>
-          <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px;">York County, SC</h3>
-          <p style="font-size:0.88rem;color:var(--gray-600);margin-bottom:16px;">In-clinic treatment at 1069 Bayshore Dr, Rock Hill, SC 29732. Serving all of York County.</p>
-          <a href="/york-county" style="color:var(--blue);font-weight:600;font-size:0.9rem;">View York County page &rarr;</a>
+        <div class="location-card">
+          <div class="loc-flag">🌿</div>
+          <h3>York County, SC</h3>
+          <p>Serving Rock Hill, Fort Mill, and the greater York County area with fast, effective lice removal.</p>
+          <a href="/york-county" class="loc-link">Learn more →</a>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
-    <h2>Ready to Be Lice-Free?</h2>
-    <p>Book an appointment at your nearest location. We'll get your family back to normal â safely, effectively, in one visit.</p>
-    <div class="cta-buttons">
-      <a href="/#locations" class="btn-primary">Book an Appointment</a>
-      <a href="tel:XXXXXXXXXX" class="btn-secondary">Call (XXX) XXX-XXXX</a>
+  <section class="cta-section" id="book">
+    <h2>Ready to Be Lice-Free Today?</h2>
+    <p>One visit. No toxins. Guaranteed results. Book your appointment now and let Nicole's team take care of the rest.</p>
+    <div class="cta-btns">
+      <a href="tel:619-771-9988" class="btn-white">Call 619-771-9988</a>
+      <a href="/#book" class="btn-outline-white">Book Online</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">LCA<span>.</span> Lice Consultants of America</div>
-        <p class="footer-desc">Professional pesticide-free lice removal serving families across the United States. Treatment completed in one visit â no homework, no follow-up.</p>
-        <div class="footer-contact">
-          ð <a href="tel:XXXXXXXXXX">(XXX) XXX-XXXX</a><br />
-          â	ï¸ <a href="mailto:info@liceconsultant.com">info@liceconsultant.com</a><br />
-          ð MonâSat 8amâ8pm &nbsp;|&nbsp; Sun 10amâ2pm
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Our Locations</h4>
-        <ul>
-          <li><a href="/san-diego">San Diego, CA</a></li>
-          <li><a href="/orlando">Orlando, FL</a></li>
-          <li><a href="/york-county">York County, SC</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/#how-it-works">How It Works</a></li>
-          <li><a href="/#faq">FAQ</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/san-diego">San Diego</a>
+      <a href="/orlando">Orlando</a>
+      <a href="/york-county">York County</a>
     </div>
-    <div class="footer-bottom">
-      <p>Â© 2025 Lice Consultants of America. All rights reserved. &nbsp;Â·&nbsp; <a href="/" style="color:rgba(255,255,255,0.6);">liceconsultant.com</a></p>
-    </div>
+    <p>© 2025 LCA Lice Consultants of America. Formerly known as Lice Clinics of America.</p>
   </footer>
 
 </body>
