@@ -39,7 +39,7 @@
 { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "20:00" },
 { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "14:00" }
 ],
-"priceRange": "$30–$220",
+"priceRange": "$30–$245",
 "areaServed": ["San Diego","Clairemont Mesa","La Jolla","Encinitas","Carlsbad","Oceanside","Escondido","San Marcos","Vista","Chula Vista","Imperial Beach","Rancho Penasquitos","El Cajon","La Mesa","Santee"]
 }
 </script>
@@ -70,7 +70,7 @@ a { color: inherit; text-decoration: none; }
 .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--blue-mist); }
 .btn-outline:hover { background: var(--blue-pale); border-color: var(--blue); }
 
-/* NAV */
+/* NAV — fixed: added display:flex so logo/links/hamburger lay out correctly */
 .nav {
   background: rgba(253,252,251,0.97);
   backdrop-filter: blur(10px);
@@ -191,6 +191,7 @@ a { color: inherit; text-decoration: none; }
   .contact__form { padding: 24px; }
 }
 </style>
+
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -201,6 +202,45 @@ a { color: inherit; text-decoration: none; }
 ]
 }
 </script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How much does lice removal cost in San Diego?",
+"acceptedAnswer": { "@type": "Answer", "text": "LCA San Diego pricing: Head Screening $30/person (free with treatment), Full Air Treatment $189 (short hair, above shoulders), $220 (long hair, shoulder to mid-back), $245 (extra long hair, waist length and longer), Express Treatment $160/person, Comb-Out $150/hr. Family discount available — 3rd member and beyond $165 each." }
+},
+{
+"@type": "Question",
+"name": "Where is the LCA San Diego clinic located?",
+"acceptedAnswer": { "@type": "Answer", "text": "Our San Diego clinic is located at 5380 Clairemont Mesa Blvd, Suite 200, San Diego, CA 92117. We are open Monday through Saturday 8am–8pm and Sunday 10am–2pm." }
+},
+{
+"@type": "Question",
+"name": "Do you offer same-day lice treatment in San Diego?",
+"acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer same-day and next-day appointments at our Clairemont Mesa clinic. Call us and we will do our best to get you in as quickly as possible." }
+},
+{
+"@type": "Question",
+"name": "Do I need to do anything at home after lice treatment?",
+"acceptedAnswer": { "@type": "Answer", "text": "No. Treatment is 100% completed in our clinic. You do not need to apply any products at home, bag stuffed animals, or strip bedding." }
+},
+{
+"@type": "Question",
+"name": "Is lice treatment safe for kids?",
+"acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Our heated-air technology is completely pesticide-free. Safe for children of all ages, pregnant women, and people with sensitive scalps." }
+},
+{
+"@type": "Question",
+"name": "What neighborhoods and cities near San Diego do you serve?",
+"acceptedAnswer": { "@type": "Answer", "text": "We serve all of San Diego County including Clairemont, La Jolla, Pacific Beach, Mission Valley, Carmel Valley, Rancho Bernardo, Poway, Chula Vista, El Cajon, Santee, La Mesa, Escondido, Vista, Carlsbad, and Encinitas." }
+}
+]
+}
+</script>
+
 </head>
 <body>
 
@@ -227,15 +267,21 @@ a { color: inherit; text-decoration: none; }
   <a href="tel:619-771-9988" style="display:block;padding:12px 0;font-size:0.95rem;font-weight:600;color:#374151;text-decoration:none;">Call 619-771-9988</a>
 </div>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container hero__inner">
     <div>
-      <div class="hero__badge"><span class="check">✓</span> Serving San Diego County Since 2014</div>
+      <div class="hero__badge">
+        <span class="check">✓</span> Serving San Diego County Since 2014
+      </div>
       <h1>Lice Removal in<br /><em>San Diego, CA</em></h1>
-      <p class="hero__sub">Pesticide-free lice treatment at our Clairemont Mesa clinic. Done in one hour — no homework, no follow-up appointments, no products to apply at home.</p>
+      <p class="hero__sub">
+        Pesticide-free lice treatment at our Clairemont Mesa clinic.
+        Done in one hour — no homework, no follow-up appointments, no products to apply at home.
+      </p>
       <div class="hero__ctas">
-        <a href="#book" class="btn btn-blue" style="font-size:1rem;padding:14px 28px;">📋 Book an Appointment</a>
-        <a href="#pricing" class="btn" style="background:rgba(255,255,255,0.10);border:2px solid rgba(255,255,255,0.28);color:#fff;font-size:1rem;padding:14px 28px;">💲 See Pricing</a>
+        <a href="#book" class="btn btn-blue" style="font-size:1rem; padding:14px 28px;">📋 Book an Appointment</a>
+        <a href="#pricing" class="btn" style="background:rgba(255,255,255,0.10); border:2px solid rgba(255,255,255,0.28); color:#fff; font-size:1rem; padding:14px 28px;">💲 See Pricing</a>
       </div>
       <div class="hero__trust">
         <div class="hero__trust-item"><div class="hero__trust-dot"></div> Same-day availability</div>
@@ -247,25 +293,38 @@ a { color: inherit; text-decoration: none; }
     <div class="hero__info">
       <div class="hero__info-row">
         <div class="hero__info-icon">📍</div>
-        <div><div class="hero__info-label">Clinic Address</div><div class="hero__info-value">5380 Clairemont Mesa Blvd, Suite 200<br />San Diego, CA 92117</div></div>
+        <div>
+          <div class="hero__info-label">Clinic Address</div>
+          <div class="hero__info-value">5380 Clairemont Mesa Blvd, Suite 200<br />San Diego, CA 92117</div>
+        </div>
       </div>
       <div class="hero__info-row">
         <div class="hero__info-icon">🕐</div>
-        <div><div class="hero__info-label">Hours</div><div class="hero__info-value">Mon–Sat: 8am–8pm<br />Sunday: 10am–2pm</div></div>
+        <div>
+          <div class="hero__info-label">Hours</div>
+          <div class="hero__info-value">Mon–Sat: 8am–8pm<br />Sunday: 10am–2pm</div>
+        </div>
       </div>
       <div class="hero__info-row">
         <div class="hero__info-icon">📞</div>
-        <div><div class="hero__info-label">Phone</div><div class="hero__info-value"><a href="tel:619-771-9988" style="color:inherit;">(619) 771-9988</a></div></div>
+        <div>
+          <div class="hero__info-label">Phone</div>
+          <div class="hero__info-value"><a href="tel:619-771-9988" style="color:inherit;">(619) 771-9988</a></div>
+        </div>
       </div>
       <div class="hero__info-row">
         <div class="hero__info-icon">✉️</div>
-        <div><div class="hero__info-label">Email</div><div class="hero__info-value"><a href="mailto:info@liceconsultant.com" style="color:inherit;">info@liceconsultant.com</a></div></div>
+        <div>
+          <div class="hero__info-label">Email</div>
+          <div class="hero__info-value"><a href="mailto:info@liceconsultant.com" style="color:inherit;">info@liceconsultant.com</a></div>
+        </div>
       </div>
       <a href="#book" class="btn btn-blue" style="width:100%;justify-content:center;margin-top:20px;">Book San Diego Appointment →</a>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section class="section section--warm" id="pricing">
   <div class="container">
     <div class="section-label">Services &amp; Pricing</div>
@@ -277,83 +336,134 @@ a { color: inherit; text-decoration: none; }
         <div class="pricing-card__name">Head Screening</div>
         <div class="pricing-card__price">$30</div>
         <div class="pricing-card__price-note">per person</div>
-        <div class="pricing-card__desc">Thorough screening to confirm whether lice or nits are present.</div>
+        <div class="pricing-card__desc">Thorough screening to confirm whether lice or nits are present. Removes all guesswork before committing to treatment.</div>
       </div>
       <div class="pricing-card featured">
         <div class="pricing-card__icon">💨</div>
         <div class="pricing-card__name">Full Air Treatment</div>
-        <div class="pricing-card__price">$220</div>
-        <div class="pricing-card__price-note">per person · short hair (3" &amp; under) $189</div>
-        <div class="pricing-card__desc">Our signature heated-air technology kills all lice and nits, followed by a complete comb-out. Done in ~1 hour.</div>
+        <div class="pricing-card__price">$189</div>
+        <div class="pricing-card__price-note">short hair (above shoulders)</div>
+        <div class="pricing-card__desc">Our signature heated-air technology kills all lice and nits, followed by a complete comb-out and protective topical rinse. Done in ~1 hour.<br /><br /><strong>Long hair (shoulder–mid-back):</strong> $220<br /><strong>Extra long hair (waist length &amp; longer):</strong> $245</div>
       </div>
       <div class="pricing-card">
         <div class="pricing-card__icon">💇</div>
         <div class="pricing-card__name">Express Treatment</div>
         <div class="pricing-card__price">$160</div>
         <div class="pricing-card__price-note">per person</div>
-        <div class="pricing-card__desc">Adapted treatment for clients with extensions, braids, locs, or specialty hair.</div>
+        <div class="pricing-card__desc">Adapted treatment for clients with extensions, braids, locs, or specialty hair. Our technicians assess and tailor the approach for your specific situation.</div>
       </div>
       <div class="pricing-card">
         <div class="pricing-card__icon">🪮</div>
         <div class="pricing-card__name">Comb-Out Treatment</div>
         <div class="pricing-card__price">$150</div>
         <div class="pricing-card__price-note">per hour</div>
-        <div class="pricing-card__desc">Thorough manual comb-out by our technicians, with a follow-up after 10 days.</div>
+        <div class="pricing-card__desc">For clients unable to use the heated-air device. Thorough manual comb-out by our technicians, with a follow-up after 10 days.</div>
       </div>
     </div>
     <div class="pricing__note">
-      <strong>Family Discount:</strong> After the first two Full Air Treatments, each additional is only $160. &nbsp;·&nbsp;
-      <strong>30-Day Re-Exposure Courtesy:</strong> 50% off a re-treatment if re-exposure occurs within 30 days.
+      <strong>👨‍👩‍👧‍👦 Family Discount:</strong> First 2 treatments at regular price. 3rd family member and each additional treatment: <strong>$165 each</strong>. Starting at $189 per person. &nbsp;·&nbsp;
+      <strong>30-Day Re-Exposure Courtesy:</strong> If re-exposure occurs within 30 days of treatment, receive 50% off a re-treatment. Terms apply.
     </div>
   </div>
 </section>
 
+<!-- ABOUT / WHY -->
 <section class="section section--blue">
   <div class="container about__grid">
     <div>
       <div class="section-label">About LCA San Diego</div>
       <h2 class="section-title">San Diego's Premier Lice Removal Clinic</h2>
-      <p class="section-sub">Located in Clairemont Mesa, serving all of San Diego County since 2014.</p>
+      <p class="section-sub">Located in Clairemont Mesa, serving all of San Diego County since 2014. Trusted by thousands of families across San Diego, Encinitas, and North County.</p>
       <div class="about__points">
-        <div class="about__point"><div class="about__point-icon">✅</div><p><strong>Treatment is complete when you leave.</strong> No at-home rinses, no return trips.</p></div>
-        <div class="about__point"><div class="about__point-icon">🌿</div><p><strong>100% pesticide-free.</strong> Safe for newborns, pregnant moms, and sensitive scalps.</p></div>
-        <div class="about__point"><div class="about__point-icon">⚡</div><p><strong>Done in about one hour.</strong> Most clients are in and out in a single visit.</p></div>
-        <div class="about__point"><div class="about__point-icon">🛡</div><p><strong>30-day guarantee.</strong> 50% off re-treatment if lice return within 30 days.</p></div>
+        <div class="about__point">
+          <div class="about__point-icon">✅</div>
+          <p><strong>Treatment is complete when you leave.</strong> No at-home rinses, no nit-picking homework, no return trips — our technicians handle everything in the clinic.</p>
+        </div>
+        <div class="about__point">
+          <div class="about__point-icon">🌿</div>
+          <p><strong>100% pesticide-free.</strong> Our heated-air technology and non-toxic products are safe for newborns, pregnant moms, and sensitive scalps.</p>
+        </div>
+        <div class="about__point">
+          <div class="about__point-icon">⚡</div>
+          <p><strong>Done in about one hour.</strong> Depending on hair length and infestation level — most clients are in and out in a single visit.</p>
+        </div>
+        <div class="about__point">
+          <div class="about__point-icon">🛡</div>
+          <p><strong>30-day guarantee.</strong> If lice return due to re-exposure within 30 days, you receive 50% off a re-treatment — no questions asked.</p>
+        </div>
       </div>
     </div>
     <div class="about__img">
-      <img src="./images/clinic-san-diego.PNG" alt="LCA San Diego lice removal clinic" />
+      <img src="./images/clinic-san-diego.PNG" alt="LCA San Diego lice removal clinic in Clairemont Mesa" />
     </div>
   </div>
 </section>
 
+<!-- SERVICE AREA -->
 <section class="section section--warm">
   <div class="container">
     <div class="section-label">Service Area</div>
     <h2 class="section-title">Serving All of San Diego County</h2>
-    <p class="section-sub">Our Clairemont Mesa clinic serves families across all of San Diego County.</p>
+    <p class="section-sub">Our Clairemont Mesa clinic is centrally located and serves families across San Diego County.</p>
     <div class="area__grid">
-      <span class="area__tag">San Diego</span><span class="area__tag">Clairemont Mesa</span><span class="area__tag">La Jolla</span>
-      <span class="area__tag">Encinitas</span><span class="area__tag">Carlsbad</span><span class="area__tag">Oceanside</span>
-      <span class="area__tag">Escondido</span><span class="area__tag">San Marcos</span><span class="area__tag">Vista</span>
-      <span class="area__tag">Chula Vista</span><span class="area__tag">Imperial Beach</span><span class="area__tag">Rancho Penasquitos</span>
-      <span class="area__tag">El Cajon</span><span class="area__tag">La Mesa</span><span class="area__tag">Santee</span>
-      <span class="area__tag">Poway</span><span class="area__tag">Kearny Mesa</span><span class="area__tag">Pacific Beach</span>
+      <span class="area__tag">San Diego</span>
+      <span class="area__tag">Clairemont Mesa</span>
+      <span class="area__tag">La Jolla</span>
+      <span class="area__tag">Encinitas</span>
+      <span class="area__tag">Carlsbad</span>
+      <span class="area__tag">Oceanside</span>
+      <span class="area__tag">Escondido</span>
+      <span class="area__tag">San Marcos</span>
+      <span class="area__tag">Vista</span>
+      <span class="area__tag">Chula Vista</span>
+      <span class="area__tag">Imperial Beach</span>
+      <span class="area__tag">Rancho Penasquitos</span>
+      <span class="area__tag">El Cajon</span>
+      <span class="area__tag">La Mesa</span>
+      <span class="area__tag">Santee</span>
+      <span class="area__tag">Poway</span>
+      <span class="area__tag">Kearny Mesa</span>
+      <span class="area__tag">Pacific Beach</span>
     </div>
   </div>
 </section>
 
+<!-- BOOK APPOINTMENT -->
 <section class="section section--blue" id="book">
   <div class="container contact__grid">
     <div class="contact__info">
       <div class="section-label">Book an Appointment</div>
       <h2 class="section-title">Request Your San Diego Appointment</h2>
-      <p>Same-day appointments are often available. Fill out the form and we'll confirm within a few hours.</p>
+      <p>Same-day appointments are often available. Fill out the form and we'll confirm your time within a few hours.</p>
       <div class="contact__details">
-        <div class="contact__detail"><div class="contact__detail-icon">📍</div><div><strong>Clinic Location</strong><span>5380 Clairemont Mesa Blvd, Suite 200<br />San Diego, CA 92117</span></div></div>
-        <div class="contact__detail"><div class="contact__detail-icon">📞</div><div><strong>Call or Text</strong><span><a href="tel:619-771-9988">(619) 771-9988</a> · Mon–Sat 8am–8pm</span></div></div>
-        <div class="contact__detail"><div class="contact__detail-icon">✉️</div><div><strong>Email</strong><span><a href="mailto:info@liceconsultant.com">info@liceconsultant.com</a></span></div></div>
-        <div class="contact__detail"><div class="contact__detail-icon">🕐</div><div><strong>Hours</strong><span>Mon–Sat 8am–8pm · Sun 10am–2pm</span></div></div>
+        <div class="contact__detail">
+          <div class="contact__detail-icon">📍</div>
+          <div>
+            <strong>Clinic Location</strong>
+            <span>5380 Clairemont Mesa Blvd, Suite 200<br />San Diego, CA 92117</span>
+          </div>
+        </div>
+        <div class="contact__detail">
+          <div class="contact__detail-icon">📞</div>
+          <div>
+            <strong>Call or Text</strong>
+            <span><a href="tel:619-771-9988">(619) 771-9988</a> · Mon–Sat 8am–8pm</span>
+          </div>
+        </div>
+        <div class="contact__detail">
+          <div class="contact__detail-icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <span><a href="mailto:info@liceconsultant.com">info@liceconsultant.com</a></span>
+          </div>
+        </div>
+        <div class="contact__detail">
+          <div class="contact__detail-icon">🕐</div>
+          <div>
+            <strong>Hours</strong>
+            <span>Mon–Sat 8am–8pm · Sun 10am–2pm</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="contact__form">
@@ -365,28 +475,30 @@ a { color: inherit; text-decoration: none; }
         </div>
         <div class="form__row">
           <div class="form__group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="jane@email.com" required /></div>
-          <div class="form__group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="(619) 000-0000" /></div>
+          <div class="form__group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(619) 000-0000" /></div>
         </div>
         <div class="form__group">
           <label for="service">Service Needed</label>
           <select id="service" name="service">
             <option value="" disabled selected>Select a service…</option>
             <option value="screening">Head Screening — $30/person</option>
-            <option value="full">Full Air Treatment — $220/person</option>
-            <option value="express">Express Treatment — $160/person</option>
+            <option value="full">Full Air Treatment — $189 short / $220 long / $245 extra long</option>
+            <option value="express">Express Treatment (extensions/braids) — $160/person</option>
             <option value="combout">Comb-Out Treatment — $150/hr</option>
             <option value="unsure">Not sure — please advise</option>
           </select>
         </div>
         <div class="form__group">
-          <label for="people">How many people?</label>
+          <label for="people">How many people need to be seen?</label>
           <select id="people" name="people_count">
-            <option value="1">1 person</option><option value="2">2 people</option>
-            <option value="3">3 people</option><option value="4+">4 or more</option>
+            <option value="1">1 person</option>
+            <option value="2">2 people</option>
+            <option value="3">3 people</option>
+            <option value="4+">4 or more</option>
           </select>
         </div>
         <div class="form__group">
-          <label for="message">Anything else? (optional)</label>
+          <label for="message">Anything else we should know? (optional)</label>
           <textarea id="message" name="message" placeholder="e.g. preferred days/times, hair type, urgent…"></textarea>
         </div>
         <button type="submit" class="btn btn-primary form__submit">Send My Request →</button>
@@ -396,35 +508,66 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
-<section class="section" style="background:var(--white);" id="faq">
+<!-- FAQ -->
+<section class="section" style="background: var(--white);" id="faq">
   <div class="container">
     <h2 class="section-title">San Diego Lice Removal — FAQ</h2>
     <p class="section-sub">Answers to the questions we hear most from San Diego families</p>
     <div style="max-width:740px;margin:32px auto 0;">
+
       <details style="border-bottom:1px solid var(--blue-mist);">
-        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">How much does lice removal cost in San Diego?<span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span></summary>
-        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">Head Screening $30/person. Full Air Treatment $220 long hair / $189 short hair. Express Treatment $160/person. Comb-Out $150/hr. Family discount available.</p>
+        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">
+          How much does lice removal cost in San Diego?
+          <span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span>
+        </summary>
+        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">Head Screening $30/person (free when a household member receives treatment). Full Air Treatment $220 long hair / $189 short hair (3" and under). Express Treatment $160/person. Manual Comb-Out $150/hr. Family discount available — call us for details.</p>
       </details>
+
       <details style="border-bottom:1px solid var(--blue-mist);">
-        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">Where is the LCA San Diego clinic?<span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span></summary>
-        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;"><strong>5380 Clairemont Mesa Blvd, Suite 200, San Diego, CA 92117.</strong> Open Mon–Sat 8am–8pm, Sun 10am–2pm.</p>
+        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">
+          Where is the LCA San Diego clinic?
+          <span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span>
+        </summary>
+        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">We're located at <strong>5380 Clairemont Mesa Blvd, Suite 200, San Diego, CA 92117</strong> — in the Clairemont Mesa area. Open Mon–Sat 8am–8pm, Sun 10am–2pm.</p>
       </details>
+
       <details style="border-bottom:1px solid var(--blue-mist);">
-        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">Do I need to do anything at home after treatment?<span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span></summary>
-        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">No — treatment is 100% complete in our clinic. No products at home, no nit-picking, no bagging stuffed animals.</p>
+        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">
+          Do I need to do anything at home after treatment?
+          <span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span>
+        </summary>
+        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">No — treatment is 100% complete before you leave our clinic. No products to apply at home, no nit-picking homework, no bagging stuffed animals. Walk out and go back to normal life.</p>
       </details>
+
       <details style="border-bottom:1px solid var(--blue-mist);">
-        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">Is the treatment safe for my child?<span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span></summary>
-        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">Yes. Pesticide-free and FDA-cleared. Safe for all ages including toddlers, pregnant women, and sensitive scalps.</p>
+        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">
+          Is the treatment safe for my child?
+          <span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span>
+        </summary>
+        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">Yes. Our heated-air treatment is completely pesticide-free. It's safe for all ages — toddlers, school-age kids, teens, adults — as well as pregnant women and people with sensitive scalps.</p>
       </details>
+
+      <details style="border-bottom:1px solid var(--blue-mist);">
+        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">
+          How is LCA different from drugstore lice shampoos?
+          <span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span>
+        </summary>
+        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">Over-the-counter lice shampoos use pesticides that many lice strains have become resistant to. They often require multiple applications and leave nits behind. LCA uses heated air technology that physically kills lice and nits — no resistance possible, no chemicals, done in one visit.</p>
+      </details>
+
       <details>
-        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">Do you offer a guarantee?<span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span></summary>
-        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">Yes. 50% off re-treatment if re-exposure occurs within 30 days.</p>
+        <summary style="cursor:pointer;padding:18px 0;font-weight:700;font-size:0.95rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;gap:16px;user-select:none;">
+          Do you offer a guarantee?
+          <span style="font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;" class="faq-icon">+</span>
+        </summary>
+        <p style="padding-bottom:18px;font-size:0.91rem;color:var(--gray-600);line-height:1.78;">Yes. If re-exposure occurs within 30 days, you receive 50% off a re-treatment as a courtesy.</p>
       </details>
+
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -433,12 +576,16 @@ a { color: inherit; text-decoration: none; }
         <p>Professional pesticide-free lice removal. Serving San Diego County since 2014.</p>
       </div>
       <div class="footer__links">
-        <a href="/">← All Locations</a><a href="/san-diego">San Diego</a>
-        <a href="/orlando">Orlando</a><a href="/york-county">York County, SC</a>
-        <a href="/about">About</a><a href="/blog">Blog</a>
+        <a href="/">← All Locations</a>
+        <a href="/san-diego">San Diego</a>
+        <a href="/orlando">Orlando</a>
+        <a href="/york-county">York County, SC</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
       </div>
       <div class="footer__links">
-        <a href="#pricing">Pricing</a><a href="#book">Book Appointment</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#book">Book Appointment</a>
         <a href="mailto:info@liceconsultant.com">info@liceconsultant.com</a>
         <a href="tel:619-771-9988">(619) 771-9988</a>
       </div>
@@ -458,5 +605,6 @@ document.querySelectorAll('details').forEach(d => {
   });
 });
 </script>
+
 </body>
 </html>
