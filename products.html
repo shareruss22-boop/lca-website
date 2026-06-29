@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lice Treatment Products | LCA Lice Consultants of America</title>
+  <meta name="description" content="All-natural, non-toxic lice treatment products used by LCA professionals. Oil treatment, mint spray, prevention shampoo, mousse, and professional lice comb — available for home use." />
+  <link rel="canonical" href="https://liceconsultant.com/products" />
+
+  <meta property="og:title" content="Lice Treatment Products | LCA" />
+  <meta property="og:description" content="The same all-natural, pesticide-free products our technicians use — now available for you to use at home." />
+  <meta property="og:url" content="https://liceconsultant.com/products" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --navy: #1B2A6B;
+      --blue: #2D8CC4;
+      --blue-pale: #EBF4FB;
+      --blue-mist: #D4E8F5;
+      --green: #2E7D4F;
+      --green-pale: #E8F5EE;
+      --gray-100: #F7F9FC;
+      --gray-200: #E8EDF5;
+      --gray-500: #6B7280;
+      --gray-600: #5A6478;
+      --gray-700: #374151;
+      --gray-800: #1E2533;
+      --white: #FFFFFF;
+      --radius: 12px;
+      --shadow: 0 2px 16px rgba(27,42,107,0.10);
+      --shadow-lg: 0 8px 32px rgba(27,42,107,0.14);
+    }
+
+    body { font-family: 'Inter', sans-serif; color: var(--gray-800); background: var(--white); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── ANNOUNCEMENT BAR ── */
+    .announce-bar {
+      background: var(--navy); color: var(--white);
+      text-align: center; padding: 10px 16px;
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.02em;
+    }
+    .announce-bar a { color: var(--blue-mist); text-decoration: underline; margin-left: 6px; }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white); border-bottom: 1px solid var(--gray-200);
+      padding: 0 24px; display: flex; align-items: center;
+      justify-content: space-between; height: 64px;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 8px rgba(27,42,107,0.07);
+    }
+    .nav-logo img { height: 48px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--gray-600); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-links .btn-nav {
+      background: var(--blue); color: var(--white);
+      padding: 8px 18px; border-radius: 8px;
+      font-weight: 600; font-size: 0.88rem; transition: background 0.2s;
+    }
+    .nav-links .btn-nav:hover { background: var(--navy); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; border-radius: 2px; }
+    .mobile-nav { display: none; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2563A8 100%);
+      color: var(--white); padding: 72px 24px 80px; text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 24px; padding: 6px 18px;
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight: 800;
+      line-height: 1.15; margin-bottom: 18px;
+      max-width: 680px; margin-left: auto; margin-right: auto;
+    }
+    .hero p {
+      font-size: 1.05rem; opacity: 0.88;
+      max-width: 540px; margin: 0 auto;
+    }
+
+    /* ── SECTION ── */
+    .section-label {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+    }
+
+    /* ── INTRO STRIP ── */
+    .intro-strip {
+      background: var(--blue-pale); border-bottom: 1px solid var(--blue-mist);
+      padding: 28px 24px; text-align: center;
+    }
+    .intro-strip p {
+      max-width: 680px; margin: 0 auto;
+      font-size: 1rem; color: var(--gray-700); line-height: 1.75;
+    }
+    .intro-strip strong { color: var(--navy); }
+
+    /* ── PRODUCTS GRID ── */
+    .products-section { padding: 72px 24px; }
+    .products-inner { max-width: 1080px; margin: 0 auto; }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 36px 28px 32px;
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .product-icon { font-size: 2.4rem; margin-bottom: 18px; }
+    .product-tag {
+      display: inline-block;
+      background: var(--green-pale); color: var(--green);
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+      margin-bottom: 14px; align-self: flex-start;
+    }
+    .product-tag.preventative { background: var(--blue-pale); color: var(--blue); }
+    .product-tag.treatment { background: var(--green-pale); color: var(--green); }
+    .product-tag.tool { background: #FEF3C7; color: #92400E; }
+    .product-name {
+      font-size: 1.1rem; font-weight: 800; color: var(--navy);
+      margin-bottom: 6px; line-height: 1.3;
+    }
+    .product-size {
+      font-size: 0.8rem; color: var(--gray-500); font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .product-desc {
+      font-size: 0.9rem; color: var(--gray-600); line-height: 1.72;
+      flex: 1;
+    }
+    .product-badge {
+      margin-top: 20px;
+      display: flex; align-items: center; gap: 8px;
+      background: var(--gray-100); border-radius: 8px;
+      padding: 10px 14px; font-size: 0.82rem; color: var(--gray-600); font-weight: 500;
+    }
+    .product-badge span { font-size: 1rem; }
+
+    /* Wide card for the last product if odd number */
+    .product-card.wide { grid-column: span 1; }
+
+    /* ── HOW TO USE ── */
+    .how-section { background: var(--gray-100); padding: 72px 24px; }
+    .how-inner { max-width: 1080px; margin: 0 auto; }
+    .how-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      margin-top: 40px;
+    }
+    .how-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 28px 24px; box-shadow: var(--shadow);
+      border: 1px solid var(--gray-200);
+    }
+    .how-step {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 0.95rem; margin-bottom: 14px;
+    }
+    .how-card h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .how-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.7; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--navy); color: var(--white);
+      padding: 72px 24px; text-align: center;
+    }
+    .cta-section h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800;
+      margin-bottom: 16px; max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .cta-section p {
+      opacity: 0.82; max-width: 500px; margin: 0 auto 32px;
+      font-size: 1rem; line-height: 1.7;
+    }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: var(--white); color: var(--navy);
+      padding: 14px 28px; border-radius: 10px;
+      font-weight: 700; font-size: 0.95rem; transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+    .btn-outline-white {
+      background: transparent; color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+      padding: 14px 28px; border-radius: 10px;
+      font-weight: 600; font-size: 0.95rem; transition: border-color 0.2s;
+    }
+    .btn-outline-white:hover { border-color: rgba(255,255,255,0.8); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--gray-800); color: rgba(255,255,255,0.7);
+      text-align: center; padding: 32px 24px; font-size: 0.85rem;
+    }
+    footer a { color: rgba(255,255,255,0.8); margin: 0 12px; }
+    footer a:hover { color: var(--white); }
+    .footer-links { margin-bottom: 16px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+      .mobile-nav {
+        display: none; flex-direction: column;
+        background: var(--white); border-bottom: 1px solid var(--gray-200);
+        padding: 16px 24px; gap: 4px;
+      }
+      .mobile-nav.open { display: flex; }
+      .mobile-nav a {
+        padding: 10px 0; font-size: 0.95rem; font-weight: 500;
+        color: var(--gray-700); border-bottom: 1px solid var(--gray-200);
+      }
+      .mobile-nav a:last-child { border-bottom: none; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .how-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announce-bar">
+    Now serving San Diego · Orlando · York County
+    <a href="/#locations">Find your nearest clinic →</a>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <a href="/" class="nav-logo"><img src="/images/lca-logo.png" alt="LCA Lice Consultants of America" /></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/san-diego">San Diego</a>
+      <a href="/orlando">Orlando</a>
+      <a href="/york-county">York County</a>
+      <a href="/products" class="active">Products</a>
+      <a href="/blog">Blog</a>
+      <a href="/#contact" class="btn-nav">Book Now</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-nav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/san-diego">San Diego</a>
+    <a href="/orlando">Orlando</a>
+    <a href="/york-county">York County</a>
+    <a href="/products">Products</a>
+    <a href="/blog">Blog</a>
+    <a href="/#contact">Book Now</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">🌿 All-Natural &amp; Non-Toxic</div>
+    <h1>Professional Lice Treatment Products<br />You Can Use at Home</h1>
+    <p>The same pesticide-free products our certified technicians use in the clinic — available for your family to use between visits or as a preventative measure.</p>
+  </section>
+
+  <!-- Intro Strip -->
+  <div class="intro-strip">
+    <p>We sell and use only <strong>all-natural, non-toxic lice treatment products</strong>. No harsh chemicals. No pesticides. Safe for the whole family — including young children and those with sensitive scalps.</p>
+  </div>
+
+  <!-- Products -->
+  <section class="products-section">
+    <div class="products-inner">
+      <div class="section-label">Our Products</div>
+      <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 8px;">Trusted by Our Technicians. Loved by Families.</h2>
+      <p style="color: var(--gray-600); max-width: 560px; font-size: 1rem; line-height: 1.75;">Every product in our line is carefully selected for effectiveness, safety, and ease of use at home.</p>
+
+      <div class="products-grid">
+
+        <!-- Oil Treatment -->
+        <div class="product-card">
+          <div class="product-icon">💧</div>
+          <span class="product-tag treatment">Treatment</span>
+          <div class="product-name">LCA Oil Treatment</div>
+          <div class="product-size">8 oz</div>
+          <p class="product-desc">Our non-toxic, pesticide-free oil treatment is used in our clinic to help kill lice. It immobilizes lice and facilitates the removal of both lice and eggs. Best results when paired with the LCA Professional Lice Comb.</p>
+          <div class="product-badge"><span>🏥</span> Used in our clinics</div>
+        </div>
+
+        <!-- Mint Spray -->
+        <div class="product-card">
+          <div class="product-icon">🌿</div>
+          <span class="product-tag preventative">Preventative</span>
+          <div class="product-name">LCA Mint Spray</div>
+          <div class="product-size">8 oz</div>
+          <p class="product-desc">Contains essential oils that attack the olfactory nerves of lice. Pleasant smelling for your family, but repels lice. Since lice spread through head-to-head contact, they are less likely to move to a head that smells like this spray. Safe to use daily.</p>
+          <div class="product-badge"><span>🌱</span> Daily preventative use</div>
+        </div>
+
+        <!-- Prevention Shampoo -->
+        <div class="product-card">
+          <div class="product-icon">🧴</div>
+          <span class="product-tag preventative">Preventative</span>
+          <div class="product-name">LCA Prevention Shampoo</div>
+          <div class="product-size">8 oz</div>
+          <p class="product-desc">Essential oil-based shampoo that attacks the olfactory nerves of lice. Smells great for your family while making hair uninviting to lice. Use it daily or whenever you normally wash your hair as part of your regular routine.</p>
+          <div class="product-badge"><span>🧼</span> Replace your regular shampoo</div>
+        </div>
+
+        <!-- Mousse Treatment -->
+        <div class="product-card">
+          <div class="product-icon">🫧</div>
+          <span class="product-tag treatment">Treatment</span>
+          <div class="product-name">LCA Mousse Treatment</div>
+          <div class="product-size">4 oz</div>
+          <p class="product-desc">Our non-toxic, enzyme-based comb-out mousse is used in our clinic to aid in the removal of lice eggs (nits). It penetrates the protein in the glue that holds nits to the hair shaft, making them significantly easier to remove. Pair with the LCA Professional Lice Comb.</p>
+          <div class="product-badge"><span>🏥</span> Used in our clinics</div>
+        </div>
+
+        <!-- Professional Lice Comb -->
+        <div class="product-card">
+          <div class="product-icon">🪮</div>
+          <span class="product-tag tool">Professional Tool</span>
+          <div class="product-name">LCA Professional Lice Comb</div>
+          <div class="product-size">One size</div>
+          <p class="product-desc">The same high-quality metal lice comb our technicians use in every treatment. Features patented micro-groove teeth designed to capture nits with ease — the single most effective tool against lice and eggs. Can be easily disinfected for use across multiple family members.</p>
+          <div class="product-badge"><span>⭐</span> The pros' choice</div>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="product-card" style="background: var(--blue-pale); border-color: var(--blue-mist); justify-content: center; text-align: center;">
+          <div style="font-size: 2.4rem; margin-bottom: 16px;">📞</div>
+          <div class="product-name" style="font-size: 1.05rem; margin-bottom: 12px;">Not Sure Which Product?</div>
+          <p class="product-desc" style="margin-bottom: 24px;">Our technicians are happy to recommend the right combination for your situation. Call or visit any of our three locations.</p>
+          <a href="tel:619-771-9988" style="display:inline-block; background: var(--navy); color: var(--white); padding: 12px 22px; border-radius: 8px; font-weight: 700; font-size: 0.9rem;">Call 619-771-9988</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Use -->
+  <section class="how-section">
+    <div class="how-inner">
+      <div class="section-label">Getting the Most Out of Our Products</div>
+      <h2 style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--navy); margin-bottom: 8px;">Tips from Our Technicians</h2>
+      <p style="color: var(--gray-600); max-width: 560px; font-size: 0.97rem; line-height: 1.75;">Follow these steps for the best results at home.</p>
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-step">1</div>
+          <h4>Start with a Treatment Product</h4>
+          <p>Apply the LCA Oil Treatment or Mousse Treatment to damp hair to immobilize lice and loosen nits from the hair shaft before combing.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-step">2</div>
+          <h4>Comb Thoroughly</h4>
+          <p>Use the LCA Professional Lice Comb in small sections from root to tip. Wipe the comb clean between passes. Good lighting and a mirror are your best friends.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-step">3</div>
+          <h4>Prevent Re-Exposure</h4>
+          <p>After treatment, switch to LCA Prevention Shampoo and Mint Spray as part of your daily routine to deter lice from coming back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Want Professional Treatment First?</h2>
+    <p>Our certified technicians can handle everything in one appointment — no homework, no follow-up visits required.</p>
+    <div class="cta-buttons">
+      <a href="/#contact" class="btn-white">📋 Book an Appointment</a>
+      <a href="/#locations" class="btn-outline-white">📍 Find a Location</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/products">Products</a>
+      <a href="/san-diego">San Diego</a>
+      <a href="/orlando">Orlando</a>
+      <a href="/york-county">York County</a>
+      <a href="/blog">Blog</a>
+    </div>
+    <p>© 2026 LCA — Lice Consultants &amp; Associates. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile nav close on link click
+    document.querySelectorAll('.mobile-nav a').forEach(a =>
+      a.addEventListener('click', () => document.querySelector('.mobile-nav').classList.remove('open'))
+    );
+  </script>
+
+</body>
+</html>
