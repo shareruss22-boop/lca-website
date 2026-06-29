@@ -133,7 +133,11 @@
       transform: translateY(-4px);
       box-shadow: var(--shadow-lg);
     }
-    .product-icon { font-size: 2.4rem; margin-bottom: 18px; }
+    .product-img {
+      width: 100%; max-width: 160px; height: 200px;
+      object-fit: contain; display: block;
+      margin: 0 auto 20px; border-radius: 8px;
+    }
     .product-tag {
       display: inline-block;
       background: var(--green-pale); color: var(--green);
@@ -309,7 +313,7 @@
 
         <!-- Oil Treatment -->
         <div class="product-card">
-          <div class="product-icon">💧</div>
+          <img src="/images/oiltreatment.jpg" alt="LCA Oil Treatment 8oz" class="product-img" />
           <span class="product-tag treatment">Treatment</span>
           <div class="product-name">LCA Oil Treatment</div>
           <div class="product-size">8 oz</div>
@@ -319,7 +323,7 @@
 
         <!-- Mint Spray -->
         <div class="product-card">
-          <div class="product-icon">🌿</div>
+          <img src="/images/mintspray.jpg" alt="LCA Mint Spray 8oz" class="product-img" />
           <span class="product-tag preventative">Preventative</span>
           <div class="product-name">LCA Mint Spray</div>
           <div class="product-size">8 oz</div>
@@ -329,7 +333,7 @@
 
         <!-- Prevention Shampoo -->
         <div class="product-card">
-          <div class="product-icon">🧴</div>
+          <img src="/images/prevention.jpg" alt="LCA Prevention Shampoo 8oz" class="product-img" />
           <span class="product-tag preventative">Preventative</span>
           <div class="product-name">LCA Prevention Shampoo</div>
           <div class="product-size">8 oz</div>
@@ -339,7 +343,7 @@
 
         <!-- Mousse Treatment -->
         <div class="product-card">
-          <div class="product-icon">🫧</div>
+          <img src="/images/mousse.jpg" alt="LCA Mousse Treatment 4oz" class="product-img" />
           <span class="product-tag treatment">Treatment</span>
           <div class="product-name">LCA Mousse Treatment</div>
           <div class="product-size">4 oz</div>
@@ -349,7 +353,7 @@
 
         <!-- Professional Lice Comb -->
         <div class="product-card">
-          <div class="product-icon">🪮</div>
+          <img src="/images/comb.jpg" alt="LCA Professional Lice Comb" class="product-img" />
           <span class="product-tag tool">Professional Tool</span>
           <div class="product-name">LCA Professional Lice Comb</div>
           <div class="product-size">One size</div>
